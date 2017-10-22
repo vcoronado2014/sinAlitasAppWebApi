@@ -6,3 +6,10 @@ D:\API_SINALITAS\WebApiSinAlitas\VCFramework.NegocioMySql\bin\Debug\VCFramework.
 D:\API_SINALITAS\WebApiSinAlitas\VCFramework.NegocioMySql\bin\Debug\VCFramework.Entidad.pdb
 D:\API_SINALITAS\WebApiSinAlitas\VCFramework.NegocioMySql\obj\Debug\VCFramework.NegocioMySql.dll
 D:\API_SINALITAS\WebApiSinAlitas\VCFramework.NegocioMySql\obj\Debug\VCFramework.NegocioMySql.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\VCFramework.NegocioMySql.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\VCFramework.NegocioMySql.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\VCFramework.Entidad.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\VCFramework.Entidad.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Debug\VCFramework.NegocioMySql.csprojResolveAssemblyReference.cache
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Debug\VCFramework.NegocioMySql.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Debug\VCFramework.NegocioMySql.pdb
