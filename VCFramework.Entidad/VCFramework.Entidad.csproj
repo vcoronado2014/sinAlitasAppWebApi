@@ -45,6 +45,9 @@
     <Compile Include="Comuna.cs" />
     <Compile Include="Cupo.cs" />
     <Compile Include="Envoltorio.cs" />
+    <Compile Include="EnvoltorioFicha.cs" />
+    <Compile Include="FichaAlumno.cs" />
+    <Compile Include="FichaPack.cs" />
     <Compile Include="LogSistema.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoCodigo.cs" />

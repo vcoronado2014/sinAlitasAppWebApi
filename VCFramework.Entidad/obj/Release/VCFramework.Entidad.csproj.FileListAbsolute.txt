@@ -1,0 +1,5 @@
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\bin\Release\VCFramework.Entidad.dll
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\bin\Release\VCFramework.Entidad.pdb
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Release\VCFramework.Entidad.csprojResolveAssemblyReference.cache
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Release\VCFramework.Entidad.dll
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Release\VCFramework.Entidad.pdb

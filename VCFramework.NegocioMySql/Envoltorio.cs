@@ -42,6 +42,8 @@ namespace VCFramework.NegocioMySql
                     }
                     if (idProfesorAsignado > 0)
                         env.Profesor = VCFramework.NegocioMySql.Profesor.ObtenerPorId(idProfesorAsignado);
+                    //ficha alumnos
+                    env.FichaAlumnos = VCFramework.NegocioMySql.EnvoltorioFicha.ListarPorIdPack(env.ProductoCodigo.Id);
                 }
             }
             catch(Exception ex)
