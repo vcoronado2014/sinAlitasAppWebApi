@@ -97,6 +97,17 @@ namespace WebApiSinAlitas
             );
             #endregion
 
+            #region  FichaAlumno
+            config.Routes.MapHttpRoute(
+                name: "FichaAlumno",
+                routeTemplate: "api/FichaAlumno",
+                defaults: new
+                {
+                    controller = "FichaAlumno"
+                }
+            );
+            #endregion
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

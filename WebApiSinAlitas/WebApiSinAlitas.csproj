@@ -222,6 +222,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CupoController.cs" />
     <Compile Include="Controllers\EnvoltorioController.cs" />
+    <Compile Include="Controllers\FichaAlumnoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoCodigoController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />

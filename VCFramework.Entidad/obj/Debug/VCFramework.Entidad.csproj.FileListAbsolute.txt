@@ -7,3 +7,4 @@ C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.En
 C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojResolveAssemblyReference.cache
 C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
 C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojResolveAssemblyReference.cache
