@@ -11,7 +11,19 @@ namespace VCFramework.NegocioMySql
     public class ProductoCodigo
     {
         public static System.Configuration.ConnectionStringSettings setCnsWebLun = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["BDColegioSql"];
+        public static List<VCFramework.Entidad.ProductoCodigo> ListarTodo()
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
 
+            List<object> lista = fac.Leer<VCFramework.Entidad.ProductoCodigo>(setCnsWebLun);
+            List<VCFramework.Entidad.ProductoCodigo> lista2 = new List<VCFramework.Entidad.ProductoCodigo>();
+            if (lista != null)
+            {
+                lista2 = lista.Cast<VCFramework.Entidad.ProductoCodigo>().ToList();
+            }
+
+            return lista2;
+        }
         public static List<VCFramework.Entidad.ProductoCodigo> Listar()
         {
             VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();

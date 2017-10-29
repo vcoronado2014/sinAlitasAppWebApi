@@ -41,5 +41,10 @@ namespace VCFramework.NegocioMySql
 
             return entidad;
         }
+        public static int Insertar(Entidad.AceptaCondiciones acepta)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Insertar<Entidad.AceptaCondiciones>(acepta, setCnsWebLun);
+        }
     }
 }

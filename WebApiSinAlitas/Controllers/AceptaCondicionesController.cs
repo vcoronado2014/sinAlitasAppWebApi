@@ -65,5 +65,50 @@ namespace WebApiSinAlitas.Controllers
 
 
         }
+
+        [System.Web.Http.AcceptVerbs("PUT")]
+        public HttpResponseMessage Put(dynamic DynamicClass)
+        {
+
+            string Input = JsonConvert.SerializeObject(DynamicClass);
+
+            dynamic data = JObject.Parse(Input);
+
+            string idPack = data.IdPack;
+            if (idPack == null)
+                throw new ArgumentNullException("PcoId");
+
+
+            //validaciones antes de ejecutar la llamada.
+            VCFramework.Entidad.AceptaCondiciones acpeta = new VCFramework.Entidad.AceptaCondiciones();
+
+            HttpResponseMessage httpResponse = new HttpResponseMessage();
+
+            try
+            {
+                acpeta.PcoId = int.Parse(idPack);
+                acpeta.Activo = 1;
+                acpeta.EsAceptado = 1;
+                acpeta.EsCompletado = 0;
+                acpeta.FechaAcepta = DateTime.Now;
+                int nuevoId = VCFramework.NegocioMySql.AceptaCondiciones.Insertar(acpeta);
+                acpeta.Id = nuevoId;
+
+                httpResponse = new HttpResponseMessage(HttpStatusCode.OK);
+                String JSON = JsonConvert.SerializeObject(acpeta);
+                httpResponse.Content = new StringContent(JSON);
+                httpResponse.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(VCFramework.NegocioMySql.Utiles.JSON_DOCTYPE);
+
+
+            }
+            catch (Exception ex)
+            {
+                httpResponse = new HttpResponseMessage(HttpStatusCode.ExpectationFailed);
+                throw ex;
+            }
+
+            return httpResponse;
+        }
+
     }
 }

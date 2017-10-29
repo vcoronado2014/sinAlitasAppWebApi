@@ -18,5 +18,6 @@ namespace VCFramework.Entidad
         public AceptaCondiciones AceptaCondiciones { get; set; }
         public List<Entidad.Cupo> Cupos { get; set;  }
         public Entidad.Profesor Profesor { get; set; }
+        public List<Entidad.EnvoltorioFicha> FichaAlumnos { get; set; }
     }
 }
