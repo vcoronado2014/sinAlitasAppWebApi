@@ -87,5 +87,16 @@ namespace VCFramework.NegocioMySql
             return entidad;
         }
 
+        public static int Insertar(Entidad.FichaAlumno ficha)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Insertar<Entidad.FichaAlumno>(ficha, setCnsWebLun);
+        }
+        public static int Modificar(Entidad.FichaAlumno ficha)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Update<Entidad.FichaAlumno>(ficha, setCnsWebLun);
+        }
+
     }
 }

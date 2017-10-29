@@ -89,5 +89,16 @@ namespace VCFramework.NegocioMySql
 
             return lista2;
         }
+
+        public static int Insertar(Entidad.FichaPack ficha)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Insertar<Entidad.FichaPack>(ficha, setCnsWebLun);
+        }
+        public static int Modificar(Entidad.FichaPack ficha)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Update<Entidad.FichaPack>(ficha, setCnsWebLun);
+        }
     }
 }

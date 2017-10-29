@@ -219,9 +219,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AceptaCondicionesController.cs" />
     <Compile Include="Controllers\AgendaExcepcionFilter.cs" />
+    <Compile Include="Controllers\AlumnosController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CupoController.cs" />
     <Compile Include="Controllers\EnvoltorioController.cs" />
+    <Compile Include="Controllers\FichaAlumnoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoCodigoController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
@@ -266,6 +268,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\apisinalitas.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

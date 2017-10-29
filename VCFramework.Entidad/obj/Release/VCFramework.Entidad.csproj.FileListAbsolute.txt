@@ -1,0 +1,10 @@
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\bin\Release\VCFramework.Entidad.dll
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\bin\Release\VCFramework.Entidad.pdb
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Release\VCFramework.Entidad.csprojResolveAssemblyReference.cache
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Release\VCFramework.Entidad.dll
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Release\VCFramework.Entidad.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\bin\Release\VCFramework.Entidad.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\bin\Release\VCFramework.Entidad.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Release\VCFramework.Entidad.csprojResolveAssemblyReference.cache
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Release\VCFramework.Entidad.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Release\VCFramework.Entidad.pdb
