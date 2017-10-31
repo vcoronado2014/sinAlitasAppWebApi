@@ -76,10 +76,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/12/2017 21:35:01</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>10/27/2017 00:41:51</publishTime>
+      <publishTime>10/30/2017 23:10:52</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>10/27/2017 00:41:51</publishTime>
+      <publishTime>10/30/2017 23:10:52</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/12/2017 21:35:01</publishTime>
@@ -217,10 +217,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/12/2017 21:35:00</publishTime>
     </File>
     <File Include="bin/VCFramework.NegocioMySql.dll">
-      <publishTime>10/27/2017 00:41:38</publishTime>
+      <publishTime>10/30/2017 23:10:39</publishTime>
     </File>
     <File Include="bin/WebApiSinAlitas.dll">
-      <publishTime>10/27/2017 00:41:43</publishTime>
+      <publishTime>10/30/2017 23:10:43</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>10/12/2017 21:35:03</publishTime>
@@ -252,11 +252,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>10/11/2017 10:12:26</publishTime>
     </File>
+    <File Include="img/agua.jpg">
+      <publishTime>10/12/2017 21:36:40</publishTime>
+    </File>
+    <File Include="img/banner_sin_alitas.png">
+      <publishTime>10/12/2017 21:36:40</publishTime>
+    </File>
+    <File Include="img/no_foto.png">
+      <publishTime>10/22/2017 15:30:31</publishTime>
+    </File>
+    <File Include="img/rostro_mujer.jpg">
+      <publishTime>10/12/2017 21:36:40</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>10/12/2017 21:35:01</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/27/2017 00:41:44</publishTime>
+      <publishTime>10/30/2017 23:10:45</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/12/2017 21:34:59</publishTime>
