@@ -76,10 +76,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/12/2017 21:35:01</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>10/30/2017 23:10:52</publishTime>
+      <publishTime>11/05/2017 19:40:59</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>10/30/2017 23:10:52</publishTime>
+      <publishTime>11/05/2017 19:40:59</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/12/2017 21:35:01</publishTime>
@@ -211,16 +211,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/12/2017 21:35:02</publishTime>
     </File>
     <File Include="bin/VCFramework.Entidad.dll">
-      <publishTime>10/26/2017 23:02:12</publishTime>
+      <publishTime>11/05/2017 19:40:37</publishTime>
     </File>
     <File Include="bin/VCFramework.Negocio.Factory.dll">
       <publishTime>10/12/2017 21:35:00</publishTime>
     </File>
     <File Include="bin/VCFramework.NegocioMySql.dll">
-      <publishTime>10/30/2017 23:10:39</publishTime>
+      <publishTime>11/05/2017 19:40:38</publishTime>
     </File>
     <File Include="bin/WebApiSinAlitas.dll">
-      <publishTime>10/30/2017 23:10:43</publishTime>
+      <publishTime>11/05/2017 19:40:48</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>10/12/2017 21:35:03</publishTime>
@@ -268,7 +268,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/12/2017 21:35:01</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/30/2017 23:10:45</publishTime>
+      <publishTime>11/05/2017 19:40:50</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/12/2017 21:34:59</publishTime>

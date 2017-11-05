@@ -12,7 +12,7 @@ namespace VCFramework.Entidad
         public int SghId { get; set; }
         public DateTime FechaHoraInicio { get; set; }
         public DateTime FechaHoraTermino { get; set; }
-        public int EstadCupo { get; set; }
+        public int EstadoCupo { get; set; }
         public string Descripcion { get; set; }
         public int Eliminado { get; set; }
         public int Activo { get; set; }
