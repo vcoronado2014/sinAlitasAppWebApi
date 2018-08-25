@@ -1,0 +1,93 @@
+/* Regular */
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-regular }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-regular }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-regular }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-regular }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-regular }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-regular }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-regular }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-bold }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-bold }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-bold }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-bold }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-bold }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Light */
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-light }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-light }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url('#{ $fonts-folder }/#{ $font-filename-light }.eot');
+  src: url('#{ $fonts-folder }/#{ $font-filename-light }.eot?#iefix') format('embedded-opentype'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.woff2') format('woff2'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.woff') format('woff'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.ttf') format('truetype'),
+       url('#{ $fonts-folder }/#{ $font-filename-light }.svg##{ $font-filename-base }') format('svg');
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: 300;
+}

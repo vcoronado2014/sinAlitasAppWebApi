@@ -1,0 +1,33 @@
+.scroll-y
+  .panel
+    .btn-group.btn-group-justified.padding-top-base.padding-horizontal-base
+      a.btn.btn-default(ng-href='#attachments')
+        i.margin-right-small.fa.fa-bars
+        | Attachments
+
+      a.btn.btn-default(ng-href='#attachments-add')
+        i.margin-right-small.fa.fa-plus-circle
+        | New
+
+    .panel-body(ng-if='!fetching && !attachment')
+      p
+        i.fa.fa-info-circle.margin-right-small
+        | Apparently this attachment does not exist
+
+    .panel-body(ng-if='fetching')
+      p
+        i.fa.fa-circle-o-notch.fa-spin.margin-right-small
+        | Obtaining information&hellip;
+
+    .panel-body.text-center(ng-if='errored')
+      p
+        i.fa.fa-exclamation-circle.margin-right-small
+        | Could not get the information from this attachment
+
+      p
+        button.btn.btn-default(ng-click='fetch()') Retry
+
+    .panel-body(ng-if='attachment')
+      attachment(
+        ng-class='{ "highlight": !attachment.own && !attachment.seenAt }',
+        attachment='attachment')

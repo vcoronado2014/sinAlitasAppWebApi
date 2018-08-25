@@ -1,0 +1,36 @@
+.scroll-y
+  .panel
+    include _mixins/header
+
+    +header('archive', 'Solicitudes cerradas', 'Solicitudes cerradas y archivadas')
+
+    .padding-horizontal-base.margin-top-base
+      .btn-group.btn-group-justified
+        include _mixins/orderer
+
+        +orderer('closedAt', 'Fecha cerrada')
+        +orderer('createdAt', 'Fecha enviada')
+        +orderer('priorityId', 'Prioridad')
+        +orderer('motiveId', 'Motivo')
+        +orderer('specialtyId', 'Especialidad', '!session.user.specialty')
+
+    .panel-body.text-center(ng-if='!fetching && !requests.length && !(params.contains || params.dateMinEnabled || params.dateMaxEnabled)')
+      h4 No tienes solicitudes cerradas en este lugar de trabajo
+      p Aquí aparecerán tus #[a(ng-href='/requests/consultations/worktable/ongoing') soliticitudes en proceso] cuando sean cerradas.
+
+    .panel-body.text-center(ng-if='!fetching && !requests.length && (params.contains || params.dateMinEnabled || params.dateMaxEnabled)')
+      h4 No hay solicitudes cerradas que coincidan con el filtro
+      p Prueba con otro filtro o limpia el formulario para mostrar todas las solicitudes cerradas.
+
+    .panel-body.text-center(ng-if='fetching')
+      h4
+        i.fa.fa-mr.fa-circle-o-notch.fa-spin.margin-right-small
+        | Buscando solicitudes
+
+    .panel-body(ng-if='!fetching && requests.length')
+      a.btn-default.btn-block(
+        ng-repeat='request in requests | orderBy : order',
+        ng-class='{ "margin-bottom-base": !$last }',
+        ng-href='/requests/{{ request.id }}')
+
+        worktable-request.block(request='request')

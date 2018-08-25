@@ -1,0 +1,13 @@
+files:
+  include: '**/*.scss'
+
+options:
+  formatter: stylish
+  merge-default-rules: true
+
+rules:
+  leading-zero: 0
+  space-before-colon: 0
+  property-sort-order: 0
+  no-important: 0
+  empty-args: 0

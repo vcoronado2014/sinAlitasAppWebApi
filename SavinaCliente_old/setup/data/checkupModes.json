@@ -1,0 +1,10 @@
+[{
+  "slug": "on-line-deferred",
+  "name": "En línea - Diferido"
+}, {
+  "slug": "on-line-simultaneous",
+  "name": "En línea - Simultáneo"
+}, {
+  "slug": "on-site",
+  "name": "Presencial"
+}]

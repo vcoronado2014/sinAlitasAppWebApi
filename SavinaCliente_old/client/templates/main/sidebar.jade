@@ -1,0 +1,44 @@
+a(ng-href='/requests/worktable/ongoing/{{ $root.session.activity.request || "consultation" }}',
+  ng-class='{ "active": $root.session.activity.name === "ongoing" }')
+
+  i.fa.fa-2x.fa-comments
+  span.text En proceso
+  span.block.label.label-info.margin-top-xs(ng-if='notifications.ongoing.total()')
+    span {{ notifications.ongoing.total() }}&ensp;
+    span(ng-if='notifications.ongoing.total() > 1') ACTUALIZACIONES
+    span(ng-if='notifications.ongoing.total() < 2') ACTUALIZACIÓN
+
+a(ng-href='/requests/worktable/sent/{{ $root.session.activity.request || "consultation" }}',
+  ng-class='{ "active": $root.session.activity.name === "sent" }',
+  ng-if='!$root.session.user.specialty')
+
+  i.fa.fa-2x.fa-paper-plane
+  span.text Enviadas
+
+a(ng-href='/requests/worktable/waiting/{{ $root.session.activity.request || "consultation" }}',
+  ng-class='{ "active": $root.session.activity.name === "waiting" }',
+  ng-if='$root.session.user.specialty')
+
+  i.fa.fa-2x.fa-clock-o
+  span.block.text En espera
+  span.block.label.label-info.margin-top-xs(ng-if='notifications.waiting.total()')
+    span {{ notifications.waiting.total() }}&ensp;
+    span(ng-if='notifications.waiting.total() > 1') NUEVAS
+    span(ng-if='notifications.waiting.total() < 2') NUEVA
+
+a(ng-href='/requests/worktable/closed/{{ $root.session.activity.request || "consultation" }}',
+  ng-class='{ "active": $root.session.activity.name === "closed" }')
+
+  i.fa.fa-2x.fa-archive
+  span.text Cerradas
+  span.block.label.label-info.margin-top-xs(ng-if='notifications.closed.total()')
+    span {{ notifications.closed.total() }}&ensp;
+    span(ng-if='notifications.closed.total() > 1') NUEVAS
+    span(ng-if='notifications.closed.total() < 2') NUEVA
+
+a(ng-href='/create',
+  ng-if='!$root.session.user.specialty',
+  ng-class='{ "active": $root.session.activity.name === "create" }')
+
+  i.fa.fa-2x.fa-plus
+  span.text Crear

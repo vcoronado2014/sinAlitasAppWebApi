@@ -1,0 +1,73 @@
+.panel
+  .btn-group.btn-group-justified.padding-top-base.padding-horizontal-base
+    a.btn.btn-default(ng-href='#attachments')
+      i.margin-right-small.fa.fa-bars
+      | Adjuntos
+
+    .btn.btn-default.active
+      i.margin-right-small.fa.fa-plus-circle
+      | Agregar
+
+  .panel-body
+    form.padding(
+      ng-submit='form.$valid && files.length && submit()',
+      name='form',
+      role='form',
+      novalidate)
+
+      .form-group
+        .input-group
+          .input-group-addon
+            i.fa.fa-fw.fa-comment
+
+          input.form-control(
+            placeholder='Escribe un título que identifique este adjunto',
+            ng-disabled='submitting',
+            ng-model='data.name',
+            required)
+
+      .form-group
+        .input-group
+          .input-group-addon
+            i.fa.fa-fw.fa-comments
+
+          textarea.form-control(
+            placeholder='Escribe una breve descripción para este adjunto',
+            ng-model='data.description',
+            ng-disabled='submitting',
+            rows='5',
+            required)
+
+      .form-group(ng-repeat='file in files')
+        .input-group
+          .input-group-addon
+            i.fa.fa-fw(ng-class='"fa-file-" + (file.type | mimeicon)')
+
+          .form-control.text-overflow {{ file.name }}
+
+          .input-group-btn
+            button.btn.btn-default(
+              ng-click='discard($index)',
+              ng-disabled='submitting')
+
+              i.fa.fa-fw.fa-times
+
+      .form-group
+        button.btn.btn-block.btn-default(
+          ng-disabled='submitting',
+          ngf-multiple='true',
+          ng-model='files',
+          ngf-keep='true',
+          ngf-select)
+
+          i.fa.margin-right-small.fa-upload
+          | Agregar archivos
+
+      .panel-footer
+        button.btn.btn-lg.btn-block.btn-default(
+          ng-disabled='form.$invalid || !files.length || submitting',
+          type='submit')
+
+          | {{ submitting && "Agregando" || "Agregar" }} adjunto
+          i.fa.margin-left-small(
+            ng-class='submitting && "fa-circle-o-notch fa-spin" || "fa-send"')

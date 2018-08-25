@@ -1,0 +1,7 @@
+main-flash {
+  @include flex(0 0 auto);
+
+  .alert {
+    margin-bottom: 0;
+  }
+}

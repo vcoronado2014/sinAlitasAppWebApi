@@ -1,0 +1,19 @@
+extends ./layout
+
+block subtitle
+  | Recuperar clave
+
+block body
+  p Te hemos enviado este correo por que has solicitado un cambio de clave.
+  p Si no fuiste tú quien lo solicitó, haz caso omiso de este mensaje.
+
+  p(style='text-align: center; padding: 24px 0;')
+    a(href='#{ url }',
+      style='background-color: #28bfae; padding: 16px; color: #ffffff; text-decoration: none; text-transform: uppercase; font-weight: bold;')
+
+      | Reestablecer mi clave
+
+  p Si no puedes seguir el enlace, copia esta dirección y pégala en la barra de direcciónes de tu navegador:
+
+  pre(style='padding: 8px; background-color: #eeeeee')
+    code #{ url }

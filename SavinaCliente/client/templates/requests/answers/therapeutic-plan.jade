@@ -1,0 +1,14 @@
+.form-group
+  .input-group
+    span.input-group-addon
+      i.fa.fa-fw.fa-pencil
+
+    span.input-group-addon
+      i.fa.fa-fw(fa-status='form.answer.diagnosisTherapeuticPlan')
+
+    textarea.form-control(
+      ng-model='answer.diagnosis.therapeuticPlan',
+      name='diagnosisTherapeuticPlan',
+      placeholder='Therapeutic Planning',
+      type='textarea',
+      rows='5')

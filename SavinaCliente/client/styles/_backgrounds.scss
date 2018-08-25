@@ -1,0 +1,13 @@
+.bg-default {
+  @include gradient-vertical($brand-info, $brand-primary);
+  background-color: $body-bg;
+}
+
+.bg-hover {
+  @include transition(all 216ms ease);
+  background-color: $default-soft;
+
+  &:hover {
+    background-color: $default-normal;
+  }
+}

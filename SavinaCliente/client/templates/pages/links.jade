@@ -1,0 +1,81 @@
+.container
+  .row
+    .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+      img.img-responsive(src='/assets/images/logo-full.png')
+
+      .padding-top-large.padding-bottom-large &nbsp;
+
+      .panel(ng-if='fetching')
+        .panel-body
+          p.lead
+            i.fa.fa-circle-o-notch.fa-spin
+            | &ensp;
+            | One moment, please&hellip;
+
+      .panel(ng-if='!fetching && error')
+        .panel-body
+          p.lead
+            i.fa.fa-exclamation-circle
+            | &ensp;
+            | Sorry but the link is not available.
+
+      .panel(ng-if='!fetching && expired')
+        .panel-body
+          p.lead
+            i.fa.fa-exclamation-triangle
+            | &ensp;
+            | We're sorry but the link has already expired.
+
+      div(ng-if='!fetching && !expired && !error')
+        .panel
+          .panel-heading
+            .panel-title
+              .panel-title-icon
+                i.fa.fa-mr.fa-fw.fa-cloud
+
+              .panel-title-text
+                h3 Ver enlace
+                p Enter your credentials to see the content
+
+          form(
+            name='form',
+            role='form',
+            ng-submit='!submitting && form.$valid && signin()',
+            novalidate)
+
+            .form-group
+              .input-group
+                span.input-group-addon
+                  i.fa.fa-at.fa-fw
+
+                input.form-control(
+                  placeholder='Enter your email',
+                  ng-model='data.email',
+                  type='email',
+                  autofocus,
+                  required)
+
+            .form-group
+              .input-group
+                span.input-group-addon
+                  i.fa.fa-asterisk.fa-fw
+
+                input.form-control(
+                  placeholder='Enter your password',
+                  ng-model='data.password',
+                  ng-minlength='4',
+                  type='password',
+                  required)
+
+            button.btn.btn-lg.btn-block.btn-default(
+              ng-disabled='form.$invalid || submitting',
+              type='submit')
+
+              i.fa.fa-fw.margin-right-small(ng-class='submitting && "fa-circle-o-notch fa-spin" || "fa-sign-in"')
+              | Continuar
+
+        include-template(ng-src='/assets/templates/divider.html')
+
+        .text-center
+          a.btn.btn-block.btn-default(ng-href='/users/recover')
+            | Olvidé mi clave

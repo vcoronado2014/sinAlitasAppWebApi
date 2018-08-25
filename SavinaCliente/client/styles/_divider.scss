@@ -1,0 +1,20 @@
+.divider {
+  @include display(flex);
+  @include align-items(center);
+  @include align-content(stretch);
+  padding: $padding-large-horizontal 0;
+
+  span.line {
+    @include flex(1 1 auto);
+    border-top: 1px solid $default-soft;
+  }
+
+  span.text {
+    @include flex(0 0 auto);
+    color         : $default-soft;
+    padding       : 0 $padding-large-horizontal;
+    font-size     : $font-size-small;
+    vertical-align: bottom;
+    text-shadow   : none;
+  }
+}

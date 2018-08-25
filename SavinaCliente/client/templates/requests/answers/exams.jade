@@ -1,0 +1,58 @@
+.form-group
+  .input-group
+    span.input-group-addon
+      i.fa.fa-stethoscope.fa-fw
+
+    input.form-control(
+      placeholder='Name of the test',
+      ng-model='form.exam.name')
+
+.form-group
+  .checkbox
+    label.control-label.input-group
+      input.hidden(
+        ng-model='form.exam.samePlace',
+        type='checkbox')
+
+      span.input-group-addon
+        i.fa.fa-fw(ng-class='form.exam.samePlace && "fa-check-square" || "fa-square-o"')
+
+      span.form-control In the same health center
+
+.form-group
+  button.btn.btn-default.btn-block(
+    ng-disabled='!form.exam.name',
+    ng-click='exams.add()',
+    type='button')
+
+    i.fa.fa-plus.margin-right-small
+    | New
+
+label New test Added
+
+.panel-body(ng-if='!answer.diagnosis.exams.length')
+  i.fa.fa-info-circle.margin-right-small
+  | Fill in the field above to add a new test
+
+.form-group(ng-repeat='exam in answer.diagnosis.exams')
+  .input-group
+    span.input-group-addon
+      i.fa.fa-fw.fa-stethoscope
+
+    .form-control
+      .block {{ exam.name }}
+
+      small(ng-if='exam.samePlace')
+        i.fa.fa-h-square.padding-right-small
+        | In the same health center
+
+      small(ng-if='!exam.samePlace')
+        i.fa.fa-ambulance.padding-right-small
+        | In another establishment
+
+    span.input-group-btn
+      button.btn.btn-default.btn-block(
+        ng-click='exams.remove($index)',
+        type='button')
+
+        i.fa.fa-fw.fa-trash

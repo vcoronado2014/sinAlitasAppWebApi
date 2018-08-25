@@ -1,0 +1,11 @@
+.panel
+  .btn-group.btn-group-justified.padding-horizontal-base.padding-top-base
+    button.btn.btn-default.active
+      i.margin-right-small.fa.fa-bars
+      | Respuestas
+
+    a.btn.btn-default(ng-href='#answers-add')
+      i.margin-right-small.fa.fa-plus-circle
+      | Agregar
+
+  include-template(ng-src='/assets/templates/requests/view/answers.html')

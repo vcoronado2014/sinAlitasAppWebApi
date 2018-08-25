@@ -1,0 +1,132 @@
+form(
+  name='form.patient',
+  role='form',
+  novalidate)
+
+  .row
+    .col-sm-9
+      .form-group
+        .input-group
+          span.input-group-addon.input-lg
+            i.fa.fa-fw(ng-class='patient.fetching && "fa-circle-o-notch fa-spin" || "fa-search"')
+
+          span.input-group-addon.input-lg
+            i.fa.fa-fw(fa-status='form.patient.run')
+
+          input.form-control.input-lg(
+            ng-keypress='$event.keyCode === 13 && data.patient.run && form.patient.run.$valid && patient.fetch()',
+            placeholder='Ingrese el RUT del paciente',
+            ng-disabled='patient.fetching',
+            ng-change='patient.clear()',
+            ng-model='data.patient.run',
+            type='text',
+            name='run',
+            required,
+            ng-rut)
+
+          span.input-group-btn
+            button.btn.btn-lg.btn-default(
+              ng-disabled='patient.fetching',
+              ng-click='patient.clear(true)',
+              type='button')
+
+              i.fa.fa-refresh.margin-right-small
+              | Limpiar
+
+    .col-sm-3
+      button.btn-block.btn-lg.btn.btn-default(
+        ng-disabled='patient.fetching || !data.patient.run || form.patient.run.$invalid',
+        ng-click='data.patient.run && patient.fetch()',
+        type='button')
+
+        i.fa.margin-right-small(ng-class='patient.fetching && "fa-circle-o-notch fa-spin" || "fa-search"')
+        | Buscar
+
+  fieldset(ng-show='patient.fetched')
+    .alert.alert-info(ng-if='patient.fetched && !patient.found')
+      i.fa.fa-info-circle.margin-right-small
+      | Ese RUT no está registrado. Por favor verifica que sea el RUT correcto y completa los datos a continuación.
+
+    .row
+      .col-sm-7
+        .form-group
+          .input-group
+            span.input-group-addon
+              i.fa.fa-fw.fa-user
+
+            span.input-group-addon
+              i.fa.fa-fw(fa-status='form.patient.firstname')
+
+            input.form-control(
+              ng-disabled='locked.patient.firstname',
+              ng-model='data.patient.firstname',
+              placeholder='Nombres del paciente',
+              name='firstname',
+              type='text',
+              required)
+
+            span.input-group-addon(ng-if='locked.patient.firstname')
+              i.fa.fa-fw.fa-lock
+
+        .form-group
+          .input-group
+            span.input-group-addon
+              i.fa.fa-fw.fa-users
+
+            span.input-group-addon
+              i.fa.fa-fw(fa-status='form.patient.lastname')
+
+            input.form-control(
+              placeholder='Apellidos del paciente',
+              ng-disabled='locked.patient.lastname',
+              ng-model='data.patient.lastname',
+              name='lastname',
+              type='text',
+              required)
+
+            span.input-group-addon(ng-if='locked.patient.lastname')
+              i.fa.fa-fw.fa-lock
+
+        .form-group
+          .input-group
+            span.input-group-addon
+              i.fa.fa-fw.fa-venus-mars
+
+            span.input-group-addon
+              i.fa.fa-fw(fa-status='form.patient.gender')
+
+            select.form-control(
+              ng-options='gender.id as gender.name for gender in genders',
+              ng-disabled='locked.patient.gender',
+              ng-model='data.patient.genderId',
+              name='gender',
+              required)
+
+            span.input-group-addon(ng-if='locked.patient.gender')
+              i.fa.fa-fw.fa-lock
+
+        .form-group
+          .input-group
+            span.input-group-addon
+              i.fa.fa-fw.fa-map-marker
+
+            span.input-group-addon
+              i.fa.fa-fw(fa-status='form.patient.city')
+
+            input.form-control(
+              placeholder='Ciudad del paciente',
+              ng-disabled='locked.patient.city',
+              ng-model='data.patient.city',
+              name='city',
+              type='text',
+              required)
+
+            span.input-group-addon(ng-if='locked.patient.city')
+              i.fa.fa-fw.fa-lock
+
+      .col-sm-5
+        datepicker(
+          dp-template='assets/templates/requests/create/datepicker.html',
+          dp-model='data.patient.birth',
+          dp-name='datepicker',
+          dp-restrict='past')

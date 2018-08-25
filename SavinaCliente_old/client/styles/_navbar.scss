@@ -1,0 +1,308 @@
+/**
+ * Navbar styles.
+ */
+.navbar {
+  @include justify-content(space-between);
+  @include flex-flow(row nowrap);
+  @include display(flex);
+  @include flex(0 0 auto);
+  @include box-shadow($panel-shadow);
+  height          : $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  background-color: $default-softer;
+  width           : 100%;
+
+  a {
+    @include transition(all 216ms ease);
+    display: block;
+    border : 0;
+  }
+
+  .navbar-header {
+    @include align-self(flex-start);
+
+    // @include flex-grow(1);
+  }
+
+  .navbar-brand {
+    color: $text-color;
+
+    &:focus,
+    &:hover {
+      color           : $navbar-default-brand-hover-color;
+      background-color: $navbar-default-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-default-color;
+  }
+
+  .navbar-nav {
+    > li {
+      display: inline-block;
+
+      & + li {
+        margin-top: 0;
+      }
+
+       > .navbar-btn,
+      > a {
+        color         : $navbar-default-link-color;
+        font-size     : $font-size-small;
+        text-transform: uppercase;
+
+        &:focus,
+        &:hover {
+          color           : $navbar-default-link-hover-color;
+          background-color: $navbar-default-link-hover-bg;
+        }
+      }
+    }
+
+    > .active {
+       > .navbar-btn,
+      > a {
+        &,
+        &:focus,
+        &:hover {
+          color           : $navbar-default-link-active-color;
+          background-color: $navbar-default-link-active-bg;
+        }
+      }
+    }
+
+    > .disabled > a {
+      &,
+      &:focus,
+      &:hover {
+        color           : $navbar-default-link-disabled-color;
+        background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:focus,
+      &:hover {
+        background-color: $navbar-default-link-active-bg;
+        color           : $navbar-default-link-active-color;
+      }
+    }
+    @media (max-width: $grid-float-breakpoint-max) {
+
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $navbar-default-link-color;
+
+          &:focus,
+          &:hover {
+            color           : $navbar-default-link-hover-color;
+            background-color: $navbar-default-link-hover-bg;
+          }
+        }
+
+        > .active > a {
+          &,
+          &:focus,
+          &:hover {
+            color           : $navbar-default-link-active-color;
+            background-color: $navbar-default-link-active-bg;
+          }
+        }
+
+        > .disabled > a {
+          &,
+          &:focus,
+          &:hover {
+            color           : $navbar-default-link-disabled-color;
+            background-color: $navbar-default-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  // Links in navbars
+  //
+  // Add a class to ensure links outside the navbar nav are colored correctly.
+  .navbar-link {
+    color: $navbar-default-link-color;
+
+    &:hover {
+      color: $navbar-default-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-default-link-color;
+
+    &:focus,
+    &:hover {
+      color: $navbar-default-link-hover-color;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+      &:focus,
+      &:hover {
+        color: $navbar-default-link-disabled-color;
+      }
+    }
+  }
+}
+
+// Fix the top/bottom navbars when screen real estate supports it
+.navbar-fixed-top {
+  @include translate3d(0, 0, 0);
+  position: fixed;
+  top     : 0;
+  right   : 0;
+  left    : 0;
+  z-index : $zindex-navbar-fixed;
+}
+
+// Brand/project name
+.navbar-brand {
+  padding    : $navbar-padding-vertical $navbar-padding-horizontal;
+  font-size  : $font-size-large;
+  line-height: 1.5;
+
+  // height: $navbar-height;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: -$navbar-padding-horizontal;
+    }
+  }
+
+  img {
+    padding: $padding-xs-vertical 0;
+    display: block;
+    height : ($navbar-height - ($navbar-padding-vertical * 2));
+    width  : auto;
+  }
+}
+
+// Navbar nav links
+//
+// Builds on top of the `@mixin nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px)@mixin
+.navbar-nav {
+  margin    : ($navbar-padding-vertical / 2) -$navbar-padding-horizontal;
+  list-style: none;
+  height    : 100%;
+  padding   : 0;
+
+  > li {
+     > .navbar-btn,
+    > a {
+      padding         : $padding-base;
+      line-height     : $line-height-computed;
+      display         : block;
+      background-image: none;
+      background-color: transparent;
+      border          : 0;
+    }
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+
+    // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position        : static;
+      width           : auto;
+      margin-top      : 0;
+      background-color: transparent;
+      border          : 0;
+      box-shadow      : none;
+
+       > li > .navbar-btn,
+      .dropdown-header,
+      > li > a {
+        padding: 5px 15px 5px 25px;
+      }
+
+      > li {
+         > .navbar-btn,
+        > a {
+          line-height: $line-height-computed;
+
+          &:focus,
+          &:hover {
+            background-image: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+
+    // float : left;
+    margin: 0;
+
+    > li {
+
+      // float: left;
+       > .navbar-btn,
+      > a {
+        padding-top   : $navbar-padding-vertical;
+        padding-bottom: $navbar-padding-vertical;
+      }
+    }
+
+    &.navbar-right:last-child {
+      margin-right: -$navbar-padding-horizontal;
+    }
+  }
+}
+
+// Component alignment
+//
+// Repurpose the pull utilities as their own navbar utilities to avoid specificity
+// issues with parents and chaining@mixin  Only do this when the navbar is uncollapsed
+// though so that navbar contents properly stack and align in mobile.
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-left {
+    @include align-self(flex-start);
+  }
+
+  .navbar-right {
+    @include align-self(flex-end);
+  }
+}
+
+// Dropdown menus
+// Menu position and menu carets
+.navbar-nav > li > .dropdown-menu {
+  @include border-top-radius(0);
+  margin-top: 0;
+}
+
+// Text in navbars
+//
+// Add a class to make any element properly align itself vertically within the navbars@mixin
+.navbar-text {
+  @include navbar-vertical-align($line-height-computed);
+  @media (min-width: $grid-float-breakpoint) {
+
+    // float: left;
+    margin-left : $navbar-padding-horizontal;
+    margin-right: $navbar-padding-horizontal;
+
+    // Outdent the form if last child to line up with content down the page
+    &.navbar-right:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[{
+  "slug": "low-priority",
+  "name": "Baja prioridad"
+}, {
+  "slug": "important",
+  "name": "Importante"
+}, {
+  "slug": "urgent",
+  "name": "Urgente"
+}]

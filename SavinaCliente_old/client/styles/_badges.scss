@@ -1,0 +1,15 @@
+.badge {
+  line-height: $line-height-base;
+  background: #fff;
+  color: $brand-info;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 10px;
+  font-size: $font-size-xs;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+  top: -1px;
+}

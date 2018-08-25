@@ -1,0 +1,29 @@
+.scroll-y
+  .panel
+    .panel-heading
+      .panel-title
+        .panel-title-icon
+          i.fa.fa-mr.fa-fw.fa-hospital-o
+
+        .panel-title-text
+          h3 Where are you working?
+          p Select your healthcare facility
+
+    .panel-body
+      .row
+        .col-md-3(ng-repeat='workplace in workplaces track by workplace.id')
+          button.btn.btn-default.btn-block.btn-lg.text-overflow(
+            ng-click='setWorkplace(workplace)',
+            ng-disabled='adding || setting')
+
+            i.fa.fa-fw.fa-5x.fa-hospital-o
+            br
+            br
+            span {{ workplace.name }}
+            br
+            small(ng-if='notifications[workplace.id] === undefined') &hellip;
+            small(ng-if='notifications[workplace.id] === 0') No updates
+            small(ng-if='notifications[workplace.id] > 0')
+              strong {{ notifications[workplace.id] }}&thinsp;
+              strong(ng-if='notifications[workplace.id] < 2') upgrade
+              strong(ng-if='notifications[workplace.id] > 1') updates

@@ -1,0 +1,14 @@
+.table {
+  width: 100%;
+  min-height: 100%;
+
+  tr {
+    th,
+    td {
+      font-family: $font-family;
+      padding: $padding-base;
+      font-weight: normal;
+      vertical-align: text-top;
+    }
+  }
+}

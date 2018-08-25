@@ -1,0 +1,46 @@
+.form-group
+  .input-group
+    span.input-group-addon
+      i.fa.fa-fw.fa-calendar-o
+
+    span.form-control(ng-if='params.dateMinEnabled') {{ params.dateMin | formatUTC:"LL" | capitalize }}
+    span.form-control(ng-if='!params.dateMinEnabled') Sin límite
+
+    span.input-group-btn
+      button.btn.btn-default(
+        ng-click='params.dateMinEnabled = !params.dateMinEnabled; filterDateMin.update()',
+        type='button')
+
+        span(ng-if='!params.dateMinEnabled')
+          | ACTIVAR
+
+        span(ng-if='params.dateMinEnabled')
+          | QUITAR
+
+fieldset(ng-disabled='!params.dateMinEnabled')
+  .row
+    .col-sm-4.form-group
+      input.form-control(
+        ng-model='filterDateMin.date.year.value',
+        min='{{ filterDateMin.date.year.min }}',
+        max='{{ filterDateMin.date.year.max }}',
+        type='number')
+
+    .col-sm-8.form-group
+      select.form-control(
+        ng-options='month.value as month.name disable when month.disabled for month in filterDateMin.date.month.list',
+        ng-model='filterDateMin.date.month.value')
+
+  .radio-group
+    label.btn.btn-default(
+      ng-class='{ "active": filterDateMin.date.day.value === day.value }',
+      ng-repeat='day in filterDateMin.date.day.list',
+      ng-disabled='day.disabled')
+
+      input(
+        ng-model='filterDateMin.date.day.value',
+        ng-disabled='day.disabled',
+        ng-value='day.value',
+        type='radio')
+
+      | {{ day.value }}

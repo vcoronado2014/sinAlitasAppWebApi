@@ -1,0 +1,78 @@
+.form-group
+  .input-group
+    span.input-group-addon
+      i.fa.fa-fw.fa-calendar
+
+    span.form-control {{ answer.diagnosis.checkupDate | formatUTC:"LL" | capitalize }}
+
+    input.hidden(
+      ng-model='answer.diagnosis.checkupDate',
+      name='diagnosisCheckupDate',
+      type='date',
+      required)
+
+fieldset
+  .form-group
+    .input-group
+      span.input-group-btn
+        button.btn.btn-default(
+          ng-click='datepicker.date.year.substract()',
+          type='button')
+
+          i.fa.fa-fw.fa-minus
+
+      input.form-control(
+        ng-model='datepicker.date.year.value',
+        min='{{ datepicker.date.year.min }}',
+        max='{{ datepicker.date.year.max }}',
+        type='number',
+        required)
+
+      span.input-group-btn
+        button.btn.btn-default(
+          ng-click='datepicker.date.year.add()',
+          type='button')
+
+          i.fa.fa-fw.fa-plus
+
+  .form-group
+    .input-group
+      span.input-group-btn
+        button.btn.btn-default(
+          ng-click='datepicker.date.month.substract()'
+          type='button')
+
+          i.fa.fa-fw.fa-minus
+
+      select.form-control(
+        ng-options='month.value as month.name disable when month.disabled for month in datepicker.date.month.list',
+        ng-model='datepicker.date.month.value',
+        required)
+
+      span.input-group-btn
+        button.btn.btn-default(
+          ng-click='datepicker.date.month.add()',
+          type='button')
+
+          i.fa.fa-fw.fa-plus
+
+  .radio-group
+    label.header(ng-repeat='a in datepicker.weekdaysMin(true)')
+      | {{ a }}
+
+    label.placeholder(ng-repeat='o in datepicker.getFirstWeekDayOffset(true)')
+      | &ensp;
+
+    label.btn.btn-default(
+      ng-class='{ "active": datepicker.date.day.value === day.value }',
+      ng-repeat='day in datepicker.date.day.list track by day.value',
+      ng-disabled='day.disabled')
+
+      input(
+        ng-model='datepicker.date.day.value',
+        ng-if='!day.disabled',
+        ng-value='day.value',
+        type='radio',
+        required)
+
+      | {{ day.value }}

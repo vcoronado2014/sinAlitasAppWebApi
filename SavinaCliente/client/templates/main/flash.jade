@@ -1,0 +1,6 @@
+button.alert(
+  ng-class='"alert-" + session.flash.type',
+  ng-click='session.flash = null')
+
+  i.fa.margin-right-small(ng-class='icon(session.flash.type)')
+  | {{ session.flash.message }}

@@ -1,0 +1,67 @@
+.card {
+  @include flex-direction(row);
+  @include align-items(stretch);
+  @include align-content(stretch);
+  @include display(flex);
+  @include flex(1);
+  text-align: left;
+
+  .card-column {
+    @include flex-direction(column);
+    @include display(flex);
+    @include flex(1);
+
+    .card-row {
+      @include align-items(stretch);
+      @include align-content(stretch);
+      @include display(flex);
+
+      .card-data,
+      .card-header {
+        padding: $padding-small-vertical $padding-small-horizontal;
+      }
+
+      .card-header {
+        @include flex(0 0 13em);
+        font-size     : $font-size-small;
+        text-transform: uppercase;
+        background    : $default-soft;
+        font-weight   : 700;
+        line-height   : 2.2;
+      }
+
+      .card-data {
+        @include flex(1);
+        text-transform: none;
+        font-weight   : 500;
+
+        hr {
+          border-top: thin solid $default-soft;
+          margin    : $padding-base-small 0;
+        }
+
+        table {
+          tr {
+            th {
+              padding-right: $padding-base-small;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        @include flex(1);
+      }
+    }
+
+    &:nth-child(1) {
+      @include flex(0 0 30em);
+
+      .card-row {
+        .card-data {
+          @include flex(0 0 20em);
+        }
+      }
+    }
+  }
+}

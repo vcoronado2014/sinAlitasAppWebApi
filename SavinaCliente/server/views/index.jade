@@ -1,0 +1,27 @@
+- var suffix = development ? '' : '.min';
+
+extends layout
+
+block body
+  main-navbar.navbar(
+    ng-if='session.user',
+    role='navigation')
+
+  main-flash(ng-if='session.flash')
+
+  main
+    main-sidebar.scroll-y.sidebar(ng-if='session.user && session.workplace')
+
+    main-loader(ng-if='loading')
+      .panel.btn(ng-if='!errored')
+        i.fa.fa-circle-o-notch.fa-spin.margin-right-xs
+        | Un momento por favor&hellip;
+
+      .panel.btn.hidden(ng-if='errored')
+        i.fa.fa-exclamation-circle.margin-right-xs
+        | Ha ocurrido un problema. Por favor refresca la página.
+
+    main-content(ng-view)
+
+
+  main-statusbar.statusbar(ng-if='session.user')

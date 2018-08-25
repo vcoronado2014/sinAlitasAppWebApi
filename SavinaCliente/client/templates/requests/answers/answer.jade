@@ -1,0 +1,88 @@
+.bg-hover.padding-small.clearfix.text-small.text-uppercase
+    i.fa.fa-comment.margin-right-small
+    | {{ answer.user.name }}
+    span.pull-right {{ answer.createdAt | calendar }}
+
+.form-control
+  div.text-pre-wrap(ng-if='!answer.user.specialty')
+    | {{ answer.comment }}
+
+  dl(ng-if='answer.user.specialty')
+    dt(ng-if='answer.requestAnswerDiagnosis.evaluation')
+      | Clinical evaluation
+
+    dd.text-pre-wrap(ng-if='answer.requestAnswerDiagnosis.evaluation')
+      | {{ answer.requestAnswerDiagnosis.evaluation }}
+
+    dt Diagnosis
+    dd.text-pre-wrap
+      strong(ng-if='answer.requestAnswerDiagnosis.confirmed')
+        | Confirm the diagnosis hypothesis of the doctor:&thinsp;
+      span {{ answer.requestAnswerDiagnosis.description }}
+
+    dt(ng-if='answer.requestAnswerDiagnosis.icds.length')
+      | ICD-10 codes
+
+    dd(ng-if='answer.requestAnswerDiagnosis.icds.length')
+      table
+        tr(ng-repeat='icd in answer.requestAnswerDiagnosis.icds track by icd.id')
+          th.padding-right-base {{ icd.code }}
+          td {{ icd.description }}
+
+    dt(ng-if='answer.requestAnswerDiagnosis.therapeuticPlan')
+      | Therapeutic plan
+
+    dd.text-pre-wrap(ng-if='answer.requestAnswerDiagnosis.therapeuticPlan')
+      | {{ answer.requestAnswerDiagnosis.therapeuticPlan }}
+
+    dt(ng-if='answer.requestAnswerDiagnosis.requestAnswerDiagnosisExams.length')
+      | Exams
+
+    dd.block(
+      ng-repeat='exam in answer.requestAnswerDiagnosis.requestAnswerDiagnosisExams track by exam.id',
+      ng-if='answer.requestAnswerDiagnosis.requestAnswerDiagnosisExams.length')
+
+      span.form-group
+        span.input-group
+          span.input-group-addon
+            i.fa.fa-fw.fa-stethoscope
+
+          span.form-control
+            span.block {{ exam.name }}
+
+            small(ng-if='exam.samePlace')
+              i.fa.fa-h-square.padding-right-small
+              | in the same health center 
+
+            small(ng-if='!exam.samePlace')
+              i.fa.fa-ambulance.padding-right-small
+              | In another establishment
+
+    dt(ng-if='answer.requestAnswerDiagnosis.checkupDate')
+      | Control
+
+    dd(ng-if='answer.requestAnswerDiagnosis.checkupDate')
+      p {{ answer.requestAnswerDiagnosis.checkupComment }}
+
+      ul.padding-top-large
+        li
+          strong Mode:
+          | &thinsp;
+          | {{ answer.requestAnswerDiagnosis.checkupMode.name }}
+
+        li
+          strong Programmed for:
+          | &thinsp;
+          | {{ answer.requestAnswerDiagnosis.checkupDate | calendar }} ({{ answer.requestAnswerDiagnosis.checkupDate | fromNow }})
+
+        li(ng-if='answer.requestAnswerDiagnosis.checkupExamsRequired')
+          | Must come with the exams requested
+
+        li(ng-if='!answer.requestAnswerDiagnosis.checkupExamsRequired')
+          | You can come without the exams
+
+        li(ng-if='answer.requestAnswerDiagnosis.checkupSameSpecialist')
+          | It must be with the same specialist
+
+        li(ng-if='!answer.requestAnswerDiagnosis.checkupSameSpecialist')
+          | It must be with another specialist

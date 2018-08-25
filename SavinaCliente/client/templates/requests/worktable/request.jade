@@ -1,0 +1,111 @@
+.worktable-requests(ng-class='{ highlight: request.highlight }')
+
+  .request-priority
+    .priority-circle-container
+      priority-circle.block(
+        priority='request.priority',
+        created='request.createdAt')
+
+  .request-data
+    .card
+      .card-column
+        .card-row
+          .card-header Paciente
+          .card-data {{ request.patient.firstname }} {{ request.patient.lastname }}
+
+        .card-row
+          .card-header Edad
+          //.card-data {{ request.patient.birth | age }}
+          //modificado por coro
+          //.card-data {{ dateBirth[1] }}
+          .card-data {{ age }}
+
+        .card-row(ng-if='!$root.session.user.specialty && request.specialistUser')
+          .card-header Profesional
+          .card-data {{ request.specialistUser.name }}
+
+        .card-row(ng-if='$root.session.user.specialty')
+          .card-header Profesional
+          .card-data {{ request.creatorUser.name }}
+
+        .card-row(ng-if='!request.specialistUser')
+          .card-header Enviada
+          //.card-data {{ request.createdAt | toLocal }} ({{ request.createdAt | fromNow }})
+          //modificado por Coro
+          .card-data {{ request.createdAt | toLocal }} ({{ dateCreate[0] }} {{ dateCreate[1] }} {{ dateCreate[2] }})
+
+        .card-row(ng-if='$root.session.user.specialty')
+          .card-header Establecimiento
+          .card-data {{ request.creatorWorkplace.name }}
+
+        .card-row
+          .card-header Creada
+          .card-data {{ request.createdAt | toLocal }}
+
+        .card-row(ng-if='request.closedAt')
+          .card-header Cerrada
+          //.card-data {{ request.closedAt | toLocal }} ({{ request.closedAt | fromNow }})
+          //modificado por Coro
+          .card-data {{ request.closedAt | toLocal }} ({{ dateClose[0] }} {{ dateClose[1] }} {{ dateClose[2] }})
+
+      .card-column
+        .card-row
+          .card-header Especialidad
+          .card-data {{ request.specialty.name }}
+
+        .card-row
+          .card-header Motivo
+          .card-data #[strong {{ request.motive.name }}:] {{ request.comment }}
+
+        .card-row(ng-if='!request.diagnosticAnswer')
+          .card-header(rowspan='2') Hipótesis
+          .card-data(rowspan='2')
+            p {{ request.hypothesis }}
+
+            div(ng-if='request.icds.length')
+
+              hr
+
+              table
+                tr(ng-repeat='icd in request.icds track by icd.id')
+                  th {{ icd.code }}
+                  td {{ icd.description }}
+
+        .card-row(ng-if='request.diagnosticAnswer')
+          .card-header(rowspan='2') Diagnóstico
+          .card-data(rowspan='2')
+            p
+              strong(ng-if='request.diagnosticAnswer.requestAnswerDiagnosis.confirmed')
+                | Confirma la hipótesis diagnóstica:
+              span
+                 | &thinsp;{{ request.diagnosticAnswer.requestAnswerDiagnosis.description }}
+
+            div(ng-if='request.diagnosticAnswer.requestAnswerDiagnosis.icds.length')
+
+              hr
+
+              table
+                tr(ng-repeat='icd in request.diagnosticAnswer.requestAnswerDiagnosis.icds track by icd.id')
+                  th {{ icd.code }}
+                  td {{ icd.description }}
+
+.alert.alert-info.alert-small(ng-if='notifications.taken || notifications.answered || notifications.attached || notifications.messaged')
+
+  span(ng-if='notifications.taken').margin-right-base
+    i.fa.fa-user-md.margin-right-small
+    span {{ request.specialistUser.name }} ha tomado esta solicitud
+
+  span(ng-if='notifications.answered').margin-right-base
+    i.fa.fa-comment.margin-right-small
+    span(ng-if='notifications.answered < 2') Nueva respuesta
+    span(ng-if='notifications.answered > 1') {{ notifications.answered }} nuevas respuestas
+
+  span(ng-if='notifications.attached').margin-right-base
+    i.fa.fa-paperclip.margin-right-small
+    span(ng-if='notifications.attached < 2') Nuevo adjunto
+    span(ng-if='notifications.attached > 1') {{ notifications.attached }} nuevos adjuntos
+
+  span(ng-if='notifications.messaged').margin-right-base
+    i.fa.fa-comments.margin-right-small
+    span(ng-if='notifications.messaged < 2') Nuevo mensaje
+    span(ng-if='notifications.messaged > 1') {{ notifications.messaged }} nuevos mensajes

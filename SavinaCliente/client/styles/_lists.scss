@@ -1,0 +1,94 @@
+// Lists
+// -------------------------
+// Unordered and Ordered lists
+ol,
+ul {
+  margin-top   : 0;
+  margin-bottom: round($line-height-computed / 2);
+  padding-left : round($padding-large-horizontal * 1.5);
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+
+  li + li {
+    margin-top: $padding-large-vertical;
+  }
+}
+
+// List options
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+%list-unstyled {
+  padding-left: 0;
+  list-style  : none;
+}
+
+.list-unstyled {
+  @extend %list-unstyled;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @extend %list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display      : inline-block;
+    padding-left : 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top   : 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+
+  dt {
+    margin-bottom: $padding-small-vertical;
+    font-size    : $font-size-h4;
+    font-weight  : lighter;
+  }
+
+  dd + dt {
+    margin-top: ($padding-large-vertical * 2);
+  }
+}
+
+dd,
+dt {
+  line-height: $line-height-base;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+// Undo browser default
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px)@mixin
+.dl-horizontal {
+  dd {
+    @include clearfix(); // Clear the floated `dt` if an empty `dd` is present
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    dt {
+      @include text-overflow();
+      float     : left;
+      width     : ($dl-horizontal-offset - 20);
+      clear     : left;
+      text-align: right;
+    }
+
+    dd {
+      margin-left: $dl-horizontal-offset;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.panel-body(ng-if='!request.requestAnswers.length')
+  p
+    i.fa.fa-info-circle.margin-right-small
+    | Aún no hay respuestas en esta solicitud
+
+.panel-body(ng-if='request.requestAnswers.length')
+  answer(
+    ng-class='{ "margin-bottom-base": !$last, "highlight": (answer.userId !== $root.session.user.id) && !answer.seenAt }',
+    ng-repeat='answer in request.requestAnswers | orderBy : "createdAt"',
+    answer='answer')

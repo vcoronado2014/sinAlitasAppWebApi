@@ -1,0 +1,19 @@
+- var suffix = development ? '' : '.min';
+- var components = '/assets/components/';
+
+doctype html
+
+html(
+  ng-app='App',
+  lang='es',
+  ng-csp)
+
+  head
+    include ./elements/head
+
+  body.bg-default
+    include ./elements/sounds
+
+    block body
+
+    include ./elements/scripts

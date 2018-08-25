@@ -1,0 +1,46 @@
+.container
+  .row
+    .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+      img.img-responsive(src='/assets/images/logo-full.png')
+
+      .padding-top-large.padding-bottom-large &nbsp;
+
+      .panel
+        .panel-heading
+          .panel-title
+            .panel-title-icon
+              i.fa.fa-mr.fa-fw.fa-cloud
+
+            .panel-title-text
+              h3 Restablecer clave
+              p Ingresa tu correo para restablecer tu clave
+
+        form(
+          ng-submit='form.$valid && submit()',
+          name='form',
+          role='form',
+          novalidate)
+
+          .form-group
+            .input-group
+              span.input-group-addon
+                i.fa.fa-at.fa-fw
+
+              input.form-control(
+                placeholder='Ingresa tu email',
+                ng-model='form.email',
+                type='email',
+                required)
+
+          button.btn.btn-lg.btn-block.btn-default(
+            ng-disabled='form.$invalid || submitting',
+            type='submit')
+
+            | Enviar
+            i.fa.margin-left-small(ng-class='submitting && "fa-circle-o-notch fa-spin" || "fa-send"')
+
+      include-template(ng-src='/assets/templates/divider.html')
+
+      a.btn.btn-block.btn-default(ng-href='/')
+        i.fa.fa-mr.fa-fw
+        | Ya tengo mi clave

@@ -1,0 +1,70 @@
+
+.form-group
+  .checkbox
+    label.control-label.input-group
+      input.hidden(
+        ng-model='answer.diagnosis.checkupRequired',
+        type='checkbox')
+
+      span.input-group-addon
+        i.fa.fa-fw(ng-class='answer.diagnosis.checkupRequired && "fa-check-square" || "fa-square-o"')
+
+      span.form-control Solicitar control
+
+.row(ng-if='answer.diagnosis.checkupRequired')
+  .col-sm-7
+    .form-group
+      .input-group
+        span.input-group-addon
+          i.fa.fa-fw.fa-list-ul
+
+        select.form-control(
+          ng-options='checkupMode.id as checkupMode.name for checkupMode in checkupModes',
+          ng-model='answer.diagnosis.checkupModeId')
+
+    .form-group
+      .input-group
+        span.input-group-addon
+            i.fa.fa-fw.fa-pencil
+
+        span.input-group-addon
+          i.fa.fa-fw(fa-status='form.answer.diagnosisCheckupComment')
+
+        textarea.form-control(
+          ng-model='answer.diagnosis.checkupComment',
+          placeholder='Comentarios sobre el control',
+          name='diagnosisCheckupComment',
+          type='textarea',
+          rows='5',
+          required)
+
+    .form-group
+      .checkbox
+        label.control-label.input-group
+          input.hidden(
+            ng-model='answer.diagnosis.checkupExamsRequired',
+            type='checkbox')
+
+          span.input-group-addon
+            i.fa.fa-fw(ng-class='answer.diagnosis.checkupExamsRequired && "fa-check-square" || "fa-square-o"')
+
+          span.form-control Venir con los exámenes realizados
+
+    .form-group
+      .checkbox
+        label.control-label.input-group
+          input.hidden(
+            ng-model='answer.diagnosis.checkupSameSpecialist',
+            type='checkbox')
+
+          span.input-group-addon
+            i.fa.fa-fw(ng-class='answer.diagnosis.checkupSameSpecialist && "fa-check-square" || "fa-square-o"')
+
+          span.form-control Con el mismo médico
+
+  .col-sm-5
+    datepicker(
+      dp-template='assets/templates/requests/answers/datepicker.html',
+      dp-model='answer.diagnosis.checkupDate',
+      dp-restrict='future',
+      dp-name='datepicker')

@@ -1,0 +1,32 @@
+/**
+ * Sidebar styles.
+ */
+
+.sidebar {
+  background-color: $default-softer;
+  @include box-shadow($panel-shadow);
+  @include flex(0 1 auto);
+
+  a {
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    padding: $padding-large-vertical $padding-base;
+    text-align: center;
+    display: block;
+    border: 0;
+
+    &:hover {
+      background-color: $default-softer;
+    }
+
+    &.active {
+      background-color: $default-harder;
+    }
+
+    i {
+      display: block;
+      font-size: $font-size-h2;
+      margin-bottom: $font-size-base;
+    }
+  }
+}

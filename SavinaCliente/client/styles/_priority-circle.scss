@@ -1,0 +1,29 @@
+.priority-circle-container {
+  padding: $padding-base (floor($padding-base * 2)) 0;
+
+  priority-circle {
+    display: block;
+  }
+
+  .date-count,
+  .date-units {
+    text-transform: uppercase;
+  }
+
+  .date-count {
+    font-size: $font-size-base;
+    font-weight: 700;
+  }
+
+  .date-units {
+    font-weight: 500;
+    font-size: $font-size-small;
+  }
+
+  .priority-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    padding-top: $padding-large-vertical;
+  }
+}

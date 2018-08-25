@@ -1,0 +1,40 @@
+.scroll-y
+  .panel
+    include _mixins/header
+
+    +header('comments', 'Solicitudes en proceso', 'Solicitudes con especialista asignado')
+
+    .padding-horizontal-base.margin-top-base
+      .btn-group.btn-group-justified
+        include _mixins/orderer
+
+        +orderer('createdAt', 'Fecha enviada')
+        +orderer('priorityId', 'Prioridad')
+        +orderer('motiveId', 'Motivo')
+        +orderer('specialtyId', 'Especialidad', '!session.user.specialty')
+
+    .panel-body.text-center(ng-if='!fetching && !requests.length && !(params.contains || params.dateMinEnabled || params.dateMaxEnabled)')
+      h4 No tienes solicitudes en proceso en este lugar de trabajo
+
+      p(ng-if='!session.user.specialty')
+        | Cuando un especialista tome una solicitud tuya verás una notificacion en la barra superior y aparecerá en esta lista.
+
+      p(ng-if='session.user.specialty')
+        | Para tomar una solicitud debes ver las #[a(ng-href='/requests/consultations/worktable/waiting') solicitudes en espera].
+
+    .panel-body.text-center(ng-if='!fetching && !requests.length && (params.contains || params.dateMinEnabled || params.dateMaxEnabled)')
+      h4 No hay solicitudes en proceso que coincidan con el filtro
+      p Prueba con otro filtro o limpia el formulario para mostrar todas las solicitudes en proceso.
+
+    .panel-body.text-center(ng-if='fetching')
+      h4
+        i.fa.fa-mr.fa-circle-o-notch.fa-spin.margin-right-small
+        | Buscando solicitudes
+
+    .panel-body(ng-if='!fetching && requests.length')
+      a.btn-default.btn-block(
+        ng-repeat='request in requests | orderBy : order',
+        ng-class=' { "margin-bottom-base": !$last }',
+        ng-href='/requests/room/{{ request.id }}')
+
+        worktable-request.block(request='request')

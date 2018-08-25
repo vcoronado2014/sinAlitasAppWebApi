@@ -1,0 +1,13 @@
+.worktable-requests {
+  @include display(flex);
+  @include align-items(stretch);
+
+  .request-priority {
+    @include flex(0 0 9em);
+  }
+
+  .request-data {
+    @include display(flex);
+    @include flex(1);
+  }
+}

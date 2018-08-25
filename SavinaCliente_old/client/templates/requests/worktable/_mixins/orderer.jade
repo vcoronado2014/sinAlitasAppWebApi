@@ -1,0 +1,11 @@
+mixin orderer(value, message, condition)
+  button.btn.btn-default(
+    ng-click='setOrder("#{ value }")',
+    ng-disabled='fetching',
+    ng-if=condition)
+
+    span #{ message }
+
+    span.padding-left-base
+      i.fa.fa-chevron-circle-up(ng-if='params.order === "-#{ value }"')
+      i.fa.fa-chevron-circle-down(ng-if='params.order === "#{ value }"')

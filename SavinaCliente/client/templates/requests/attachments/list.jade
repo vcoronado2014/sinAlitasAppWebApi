@@ -1,0 +1,47 @@
+.panel
+  .btn-group.btn-group-justified.padding-top-base.padding-horizontal-base
+    button.btn.btn-default.active
+      i.margin-right-small.fa.fa-bars
+      | Attachments
+
+    a.btn.btn-default(ng-href='#attachments-add')
+      i.margin-right-small.fa.fa-plus-circle
+      | Add
+
+  .panel-body(ng-if='!fetching && !attachments.length')
+    p
+      i.margin-right-small.fa.fa-info-circle
+      | There are no attachments in this application
+
+  .panel-body(ng-if='fetching')
+    p
+      i.margin-right-small.fa.fa-circle-o-notch.fa-spin
+      | Searching attachments&hellip;
+
+  .panel-body.text-center(ng-if='errored')
+    p
+      i.margin-right-small.fa.fa-exclamation-circle
+      | The attachments could not be obtained
+
+    p
+      button.btn.btn-default(ng-click='fetch()') Retry
+
+  .panel-body(ng-if='attachments.length')
+    button.btn.btn-default.btn-block.btn-list-item(
+      ng-class='{ "highlight": (attachment.userId !== $root.session.user.id) && !attachment.seenAt }',
+      ng-repeat='attachment in attachments | orderBy:"-createdAt"',
+      ng-click='view(attachment.id)')
+
+      span.bg-hover.padding-small.clearfix.text-small.block.text-uppercase
+        i.fa.fa-comment.margin-right-small
+        | {{ attachment.user.name }}
+        span.pull-right {{ attachment.createdAt | calendar }}
+
+      span.block.padding-horizontal-base.padding-bottom-base
+        span.block.padding-vertical-base
+          span #[strong {{ attachment.name }}:] {{ attachment.description }}
+
+        span.block.tag-list(ng-if='attachment.files.length')
+          span.tag(ng-repeat='file in attachment.files track by file.id')
+            i.margin-right-small.fa(ng-class='"fa-file-" + (file.mimetype | mimeicon)')
+            | {{ file.filename }}

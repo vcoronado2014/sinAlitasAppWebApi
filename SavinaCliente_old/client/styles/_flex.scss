@@ -1,0 +1,16 @@
+.flex-display  {
+  @include display(flex);
+}
+
+.flex-row  {
+  @include flex-direction(row);
+}
+
+.flex-column  {
+  @include flex-direction(column);
+}
+
+.flex-center-center  {
+  @include justify-content(center);
+  @include align-items(center);
+}

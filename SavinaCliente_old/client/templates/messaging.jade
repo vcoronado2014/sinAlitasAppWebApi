@@ -1,0 +1,46 @@
+.message-list(scroll-glue-bottom='glued')
+  .loading(ng-if='!ready')
+    i.fa.fa-spin.fa-circle-o-notch.margin-right-small
+    | Cargando mensajes&hellip;
+
+  label(ng-if='ready && !messages.length')
+    i.margin-right-small.fa.fa-meh-o
+    | No hay mensajes
+
+  message.message(
+    ng-repeat='message in messages | orderBy : "sentAt"',
+    messages='messages',
+    notify='notify',
+    index='$index')
+
+  .message(ng-if='ready && peerWriting')
+    .bubble
+      .image
+      .body
+        p
+          i.fa.fa-ellipsis-h
+
+form.message-input(
+  ng-submit='form.$valid && send()',
+  role='form',
+  name='form',
+  novalidate)
+
+  .input-group
+    span.input-group-addon
+      i.fa.fa-fw(
+        ng-class='(connected && ready && !sending) && "fa-comment" || "fa-spin fa-circle-o-notch"')
+
+    input.form-control(
+      placeholder='Escribe tu mensaje aquí...',
+      ng-keypress='writing()',
+      ng-disabled='sending',
+      ng-model='form.body',
+      required)
+
+    span.input-group-btn
+      button.btn.btn-default(
+        ng-disabled='form.$invalid || !ready || sending',
+        type='submit')
+
+        i.fa.fa-fw.fa-send

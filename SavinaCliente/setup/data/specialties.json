@@ -1,0 +1,157 @@
+[{
+  "slug": "cardiology",
+  "name": "Cardiología"
+}, {
+  "slug": "neurology",
+  "name": "Neurología"
+}, {
+  "slug": "traumatology",
+  "name": "Traumatología"
+}, {
+  "slug": "pediatrics",
+  "name": "Pediatría"
+}, {
+  "slug": "internal-medicine",
+  "name": "Medicina Interna"
+}, {
+  "slug": "diabetes",
+  "name": "Diabetes"
+}, {
+  "slug": "neonatology",
+  "name": "Neonatología"
+}, {
+  "slug": "bronchopulmonary-child",
+  "name": "Broncopulmonar Infantil"
+}, {
+  "slug": "bronchopulmonary-adult",
+  "name": "Broncopulmonar Adulto"
+}, {
+  "slug": "cardiology-child",
+  "name": "Cardiología Infantil"
+}, {
+  "slug": "cardiology-adult",
+  "name": "Cardiología Adulto"
+}, {
+  "slug": "endocrinology-child",
+  "name": "Endocrinología Infantil"
+}, {
+  "slug": "endocrinology-adult",
+  "name": "Endocrinología Adulto"
+}, {
+  "slug": "gastroenterology-child",
+  "name": "Gastroenterología Infantil"
+}, {
+  "slug": "gastroenterology-adult",
+  "name": "Gastroenterología Adulto"
+}, {
+  "slug": "genetics-child",
+  "name": "Genética Infantil"
+}, {
+  "slug": "genetics-adult",
+  "name": "Genética Adulto"
+}, {
+  "slug": "hematology-child",
+  "name": "Hematología Infantil"
+}, {
+  "slug": "hematology-adult",
+  "name": "Hematología Adulto"
+}, {
+  "slug": "nephrology-child",
+  "name": "Nefrología Infantil"
+}, {
+  "slug": "nephrology-adult",
+  "name": "Nefrología Adulto"
+}, {
+  "slug": "nutrition-child",
+  "name": "Nutrición Infantil"
+}, {
+  "slug": "nutrition-adult",
+  "name": "Nutrición Adulto"
+}, {
+  "slug": "rheumatology",
+  "name": "Reumatología"
+}, {
+  "slug": "dermatology-child",
+  "name": "Dermatología Infantil"
+}, {
+  "slug": "dermatology-adult",
+  "name": "Dermatología Adulto"
+}, {
+  "slug": "geriatrics",
+  "name": "Geriatría"
+}, {
+  "slug": "neurology-child",
+  "name": "Neurología Infantil"
+}, {
+  "slug": "neurology-adult",
+  "name": "Neurología Adulto"
+}, {
+  "slug": "oncology-child",
+  "name": "Oncología Infantil"
+}, {
+  "slug": "oncology-adult",
+  "name": "Oncología Adulto"
+}, {
+  "slug": "psychiatry-child",
+  "name": "Psiquiatría Infantil"
+}, {
+  "slug": "psychiatry-adult",
+  "name": "Psiquiatría Adulto"
+}, {
+  "slug": "surgery-child",
+  "name": "Cirugía Infantil"
+}, {
+  "slug": "surgery-adult",
+  "name": "Cirugía Adulto"
+}, {
+  "slug": "maxillofacial-surgery-child",
+  "name": "Cirugía Maxilo Facial Infantil"
+}, {
+  "slug": "maxillofacial-surgery-adult",
+  "name": "Cirugía Maxilo Facial Adulto"
+}, {
+  "slug": "plastic-surgery-child",
+  "name": "Cirugía Plástica Infantil"
+}, {
+  "slug": "plastic-surgery-adult",
+  "name": "Cirugía Plástica Adulto"
+}, {
+  "slug": "peripheral-vascular-surgery",
+  "name": "Cirugía Vascular Periférica"
+}, {
+  "slug": "neurosurgery-child",
+  "name": "Neurocirugía Infantil"
+}, {
+  "slug": "neurosurgery-adult",
+  "name": "Neurocirugía Adulto"
+}, {
+  "slug": "obstetrics",
+  "name": "Obstetricia"
+}, {
+  "slug": "high-risk-obstetric",
+  "name": "Alto Riesgo Obstétrico"
+}, {
+  "slug": "ophthalmology",
+  "name": "Oftalmología"
+}, {
+  "slug": "otolaryngology",
+  "name": "Otorrinolaringología"
+}, {
+  "slug": "traumatology-child",
+  "name": "Traumatología Infantil"
+}, {
+  "slug": "traumatology-adult",
+  "name": "Traumatología Adulto"
+}, {
+  "slug": "urology-child",
+  "name": "Urología Infantil"
+}, {
+  "slug": "urology-adult",
+  "name": "Urología Adulto"
+}, {
+  "slug": "family-medicine",
+  "name": "Medicina Familiar"
+}, {
+  "slug": "dentistry",
+  "name": "Odontopediatría"
+}]

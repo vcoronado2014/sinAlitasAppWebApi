@@ -1,0 +1,21 @@
+# Used to remove files from deployment using `git archive`
+# Git files
+.gitattributes export-ignore
+.gitignore export-ignore
+
+# Config and rc files
+.editorconfig export-ignore
+.jsbeautifyrc export-ignore
+.jshintrc export-ignore
+.bowerrc export-ignore
+
+# Tasks
+gulpfile.js export-ignore
+
+# Client source files
+client/scripts export-ignore
+client/styles export-ignore
+client/templates export-ignore
+
+# Other unnecessary files for release
+bower.json export-ignore

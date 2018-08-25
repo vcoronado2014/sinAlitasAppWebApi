@@ -1,0 +1,16 @@
+.padding-horizontal-base.btn-group.btn-group-justified
+  a.btn.btn-default(
+    ng-href='/requests/worktable/{{ $root.session.activity.name }}/consultation',
+    ng-class='{ "active": $root.session.activity.request === "consultation" }')
+    | Interconsultas
+
+    span.label.label-info.margin-left-small(ng-if='notifications.consultation.length')
+      | {{ notifications.consultation.length }}
+
+  a.btn.btn-default(
+    ng-href='/requests/worktable/{{ $root.session.activity.name }}/diagnosis',
+    ng-class='{ "active": $root.session.activity.request === "diagnosis" }')
+    | Diagnósticos remotos
+
+    span.label.label-info.margin-left-small(ng-if='notifications.diagnosis.length')
+      | {{ notifications.diagnosis.length }}
