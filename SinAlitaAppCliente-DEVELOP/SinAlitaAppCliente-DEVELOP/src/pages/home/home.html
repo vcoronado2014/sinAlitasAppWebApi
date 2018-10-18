@@ -1,0 +1,56 @@
+<ion-header class="mui--bg-color-blue-500 fg-light">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inicio</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini class="mui--bg-color-blue-900"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <a href="{{urlFacebook}}" ion-fab><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="{{urlFun}}" ion-fab><ion-icon name="at"></ion-icon></a>
+      <a href="{{urlInstagram}}" ion-fab><ion-icon name="logo-instagram"></ion-icon></a>
+    </ion-fab-list>
+  </ion-fab>
+  <h2 ion-text class="mui--text-title mui--text-dark-secondary">Bienvenido a la App SinAlitas</h2>
+  <ion-grid style="padding-bottom: 0;">
+    <ion-row>
+      <ion-item style="text-align: center;" no-lines>
+        <img src="{{icono}}" style="max-height: 120px;">
+      </ion-item>
+    </ion-row>
+  </ion-grid>
+
+  <p text-justify class="mui--text-dark-secondary mui--text-body2" padding-left>
+
+    Estimado cliente muchas gracias por confiar en nuestros servicios y comenzar a vivir la experiencia de SinAlitas.
+
+  </p>
+  <ion-list-header style="padding-bottom: 0; margin-bottom: 0; text-align: center; border-bottom: 1px solid #dedede;" class="mui--text-dark mui--text-subhead mui--bg-color-blue-50 mui--color-blue-700">
+    Acceso Clientes
+  </ion-list-header>
+  <ion-item style="background: transparent;">
+    <ion-label floating class="mui--text-dark-secondary">Código Pack</ion-label>
+    <ion-input clearInput [(ngModel)]="codigoCliente"></ion-input>
+
+  </ion-item>
+  <ion-col text-left>
+    <button ion-button class="mui--bg-color-blue-500" style="width: 100%;" (click)="Signup()" > Buscar</button>
+  </ion-col>
+
+
+</ion-content>
+
+<!--
+<ion-footer no-border class="secondary">
+  <ion-toolbar row>
+
+    <ion-icon name="md-person" style="font-size: 1.2em;" col></ion-icon>
+    <label ion-text col>{{ nombreUsuario }}</label>
+  </ion-toolbar>
+</ion-footer>-->

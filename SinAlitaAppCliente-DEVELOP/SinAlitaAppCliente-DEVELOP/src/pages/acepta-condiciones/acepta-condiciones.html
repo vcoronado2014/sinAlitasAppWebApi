@@ -1,0 +1,165 @@
+<ion-header class="mui--bg-color-blue-500 fg-light">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-1>
+          <ion-icon name="arrow-back" start (click)="close()" style="font-size: 1.5em;"></ion-icon>
+        </ion-col>
+        <ion-col col-11>
+          <ion-title start>
+            Acepta Condiciones
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color="dark"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <a href="{{urlFacebook}}" ion-fab><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="{{urlFun}}" ion-fab><ion-icon name="at"></ion-icon></a>
+      <a href="{{urlInstagram}}" ion-fab><ion-icon name="logo-instagram"></ion-icon></a>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="mui--bg-color-blue-100" style="width: 100%;" (click)="atras()"> Cancelar</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button class="mui--bg-color-blue-500" style="width: 100%;" (click)="aceptar()"> Acepto</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-row>
+    <h5> TERMINOS YCONDICIONES SINALITAS</h5>
+
+    <h6> RESPONSABILIDAD SINALITAS</h6>
+    <div style="text-align: justify; font-size: smaller;">
+      <ul style="list-style-type: decimal">
+        <li>
+        Garantizamos que todos sus profesores estáncapacitados para realizar clases de natación y trabajar con menores de edad,siendo previamente capacitados y revisada su información tanto profesional comopersonal.
+      </li>
+        <li>
+          Entregamos información profesional solo anuestros clientes.
+        </li>
+
+      <li>
+    Nos hacemos responsable de toda acciónprofesional de nuestro staff quedando fuera de toda responsabilidad legal antecualquier comportamiento no profesional de nuestro staff. Toda actividad o actono adecuado fuera de lugar de trabajo cae en responsabilidad de la persona quelo realice. La primera clase se realizará completamente GRATIS
+      </li>
+        <li>
+    El profesor podra llegar con un máximo de 10minutos de atraso, si este tiempo es superado la clienta tendra la facultad dereagendar esta clase.
+        </li>
+        <li>
+    Nuestros clientes tendran acceso a unaaplicación donde podra de revisar sus clases agendadas, asi como tambieningresar datos de alumnos, acepto condiciones y revisar el perfil e informaciónde su profesor.
+        </li>
+        <li>
+    Sinalitas te asegura que el profesor que iniciael pack de clases es el que finaliza el periodo de las 8 clases, de suceder locontrario la clienta será avisada con anterioridad, trasparentando las razonesy a su vez tendra la libertad de aceptar continuar con las clases o dejar hastael numero de clases que lleven realizadas hasta el momento respetando el valorconsiderado como valor clase Pack. Si lleva a suceder lo anterior y se debecambiar el profesor, SinAlitas regalara una clase extra para la adaptación conel nuevo profesor.
+        </li>
+        <li>
+    Es responsabilidad de SinAlitas que todo alumnodeba realizar la evaluación diagnostica en la primera clase, además de sercompartida con el apoderado o responsable.
+        </li>
+        <li>
+    Todo niño que participe de los pack SinAlitasdebe tener una ficha medica personalizada, la cual de ser ingresada en laaplicación al momento de ser asginado un codigo de clienta. La personaresponsable en ingresar los datos debe ingresar la información solicitada ytotalmente correcta en caso de cualquier tipo de accidente.
+        </li>
+        <li>
+    El profesor deberá poner en contacto deinmediato con la clienta, en un tiempo de 30 min. antes de la clase en caso deatraso o dificultad de lo contrario, la clase será re-agendada.
+        </li>
+      </ul>
+    </div>
+
+    <h6>RESPONSABILIDAD DEL CLIENTE</h6>
+    <div style="text-align: justify; font-size: smaller;">
+      <ul style="list-style-type: decimal">
+        <li>
+    Las clientas tendran un minimo 4 hrs antes decada clase para reagendarlas o cancelarla, de lo contrario la clase seconsiderara como realizada y el sistema no podra agendarla. Esto debera seravisaro por whastapp para dejar respaldo.
+        </li>
+        <li>
+    Toda clienta SinAlitas podrá evaluar y comentarsobre nuestros profesores, la experiencia vivida junto a nosotros es muyimportante. Esto lo podra hacer de manera libre, respetando la privacidad desus comentarios.
+        </li>
+        <li>
+    Es indispensable para realizar cualquier clase,que la piscina en la cual se trabaje deba estar en las mejores condiciones, porseguridad de los niños y nuestros profesionales, de lo contrario la clase sedeberá realizar fuera de la piscina o de lo contrario se cancelará la clasecontando esta como realizada.
+        </li>
+
+      <ul style="list-style-type: lower-alpha">
+        <li>
+    Recomendaciones SinAlitas con nuestros clientes
+        </li>
+        <li>
+    Lugar cerrado donde puedan cambiarse elprofesor.
+        </li>
+        <li>
+    Un adulto responsable en el lugar donde seimparten las clases.
+        </li>
+      </ul>
+
+      <li>
+    Piscina que cumpla con el protocolo deseguridad, evaluado por Profesor Sinalitas
+      </li>
+      <li>
+    El profesor podrá esperar 15 minutos de atrasosde nuestros clientes para comenzar la clase. Si la espera es superior, la clasese va a considerar como clase realizada.
+      </li>
+      <li>
+    Queda completamente prohibido INCLUIR a niñosque no esten inscritos al pack, de lo contrario el profesor tiene la facultadde cancelar su clase.
+      </li>
+      <li>
+    A la 6ta o 9na clase como máximo segúncorresponda, se deberá pagar la totalidad de pack, de lo contrario la clasesiguiente no podrá ser realizada.
+      </li>
+
+    </ul>
+    </div>
+
+
+    <h6>MODIFICACIONES DECLASES</h6>
+
+    <div style="text-align: justify; font-size: smaller;">
+      <ul style="list-style-type: decimal">
+        <li>
+    Nuestros clientes podran reagendar su clase conun maximo de una semana de posterioridad, tambien podran reagendar clases delpack con un tope maximo de 3 clases.
+        </li>
+        <li>
+    Se podra contratar un minimo de 5 clases porpack
+        </li>
+        <li>
+    Cada cliente deberá agendar un mínimode 3 clases por semana.
+        </li>
+        <li>
+    Toda clase realizada los días SABADOS Y DOMINGOStendrá un cargo adicional de $5.000 por clase, esta será sumada al total delpack contratado. Los días festivos no se realizan clases.
+        </li>
+      </ul>
+    </div>
+
+    <h6>VALORES</h6>
+    <div style="text-align: justify; font-size: smaller;">
+      <ul style="list-style-type: decimal">
+        <li>
+    Las clientas al contratar el PACK 1 o 2 niños, tendran un valorpreferencial de $26.000.- por claseal realizar las 8 clases y de $20.000.- por clase al realizar 12clases. Si la clienta por algún motivo contrata o desea bajar la cantidad declases de 1 a 7 clases el valor por clase seráde $35.000.- y de 8 a 11 clases $26.000.-
+        </li>
+        <li>
+    Las clientas al contratar el PACK 3 niños, tendran un valorpreferencial de $36.000.- por claseal realizar las 8 clases y de $27.000.- por clase al realizar 12clases. Si la clienta por algún motivo contrata o desea bajar la cantidad declases de 1 a 7 clases el valor por clase seráde $42.000.-y de 8 a 11 clases $35.000.-
+        </li>
+        <li>
+    Lasclientas al contratar el PACK 4 niños,tendran un valor preferencial de $44.000.-por clase al realizar las 8 clases y de $32.000.- por clase al realizar 12clases. Si la clienta por algún motivo contrata o desea bajar la cantidad declases de 1 a 7 clases el valor por clase seráde $54.000.-y de 8 a 11 clases $40.000.-
+        </li>
+      </ul>
+    </div>
+    <h6>PAGOS DE SERVICIOS</h6>
+    <div style="text-align: justify; font-size: smaller;">
+      <ul style="list-style-type: decimal">
+        <li>
+    Respecto al pago, solo aceptamos transferencia electrónica a cuenta corrienteo chequera electronica número 37173172703 ,BANCO ESTADO, a Nombre PRODUCTORA DEPORTIVA rut 76445011-6. El comprobante depago debe ser enviado al correo pagos@sinalitas.cl. Ningún profesional deSinAlitas está autorizado para solicitar o recibir dinero en efectivo o cheques.
+        </li>
+      </ul>
+    </div>
+    <p>
+    Al acceder y utilizar este servicio, usted acepta y accede acumplir en los términos y requerimientos de este acuerdo.
+    </p>
+  </ion-row>
+
+
+</ion-content>

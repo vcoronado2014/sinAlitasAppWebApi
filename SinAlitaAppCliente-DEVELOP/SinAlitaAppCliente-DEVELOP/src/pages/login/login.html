@@ -1,0 +1,64 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="mui--bg-color-blue-500 fg-light">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Acceso</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-fab top right edge>
+      <button ion-fab mini class="mui--bg-color-blue-900">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <ion-fab-list>
+        <a href="{{urlFacebook}}" ion-fab>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="{{urlFun}}" ion-fab>
+          <ion-icon name="at"></ion-icon>
+        </a>
+        <a href="{{urlInstagram}}" ion-fab>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </ion-fab-list>
+    </ion-fab>
+    <h6 ion-text class="mui--text-title mui--text-dark-secondary">Bienvenido a la App SinAlitas, ingrese sus credenciales de acceso</h6>
+    <ion-grid style="padding-bottom: 0;">
+      <ion-row>
+        <ion-item style="text-align: center;" no-lines>
+          <img src="{{icono}}" style="max-height: 120px;">
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row> 
+        <ion-item style="background: transparent;">
+          <ion-label floating class="mui--text-dark-secondary">Usuario</ion-label>
+          <ion-input clearInput [(ngModel)]="usuario"></ion-input>
+      
+        </ion-item>
+        <ion-item style="background: transparent;">
+          <ion-label floating class="mui--text-dark-secondary">Clave</ion-label>
+          <ion-input clearInput [(ngModel)]="clave" type="password"></ion-input>
+      
+        </ion-item>
+        <ion-col text-left>
+            <button ion-button class="mui--bg-color-red-500" style="width: 100%;" (click)="goBack()"> Cancelar</button>
+          </ion-col>
+        <ion-col text-left>
+          <button ion-button class="mui--bg-color-green-500" style="width: 100%;" (click)="Signup()"> Ingresar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

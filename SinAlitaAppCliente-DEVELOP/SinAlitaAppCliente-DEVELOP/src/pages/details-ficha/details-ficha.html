@@ -1,0 +1,109 @@
+<ion-header class="mui--bg-color-blue-500 fg-light">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-1>
+          <ion-icon name="arrow-back" start (click)="close()" style="font-size: 1.5em;"></ion-icon>
+        </ion-col>
+        <ion-col col-11>
+          <ion-title start>
+            Ficha
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini class="mui--bg-color-blue-900"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <a href="{{urlFacebook}}" ion-fab><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="{{urlFun}}" ion-fab><ion-icon name="at"></ion-icon></a>
+      <a href="{{urlInstagram}}" ion-fab><ion-icon name="logo-instagram"></ion-icon></a>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div style="padding-top: 10px;">
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        Alumno
+      </ion-segment-button>
+      <ion-segment-button value="Medicos">
+        Médicos
+      </ion-segment-button>
+      <ion-segment-button value="Otros">
+        Otros
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="pet">
+    <ion-row  *ngSwitchCase="'puppies'">
+      <!-- nombre del alumno -->
+      <ion-item>
+        <ion-label floating>Nombre Completo</ion-label>
+        <ion-input type="text" disabled="true" [(ngModel)]="nombreCompleto"></ion-input>
+      </ion-item>
+
+      <!-- edad -->
+      <ion-item col-6>
+        <ion-label floating>Edad</ion-label>
+        <ion-input type="number" disabled="true" [(ngModel)]="edad"></ion-input>
+      </ion-item>
+
+      <ion-item col-6>
+        <ion-label floating>Sexo</ion-label>
+        <ion-select [(ngModel)]="sexo" disabled="true">
+          <ion-option value="Hombre">Hombre</ion-option>
+          <ion-option value="Mujer">Mujer</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-row>
+    <ion-row *ngSwitchCase="'Medicos'">
+      <ion-item col-9>
+        <ion-label floating>¿Problemas Cardiacos, cuales?</ion-label>
+        <ion-input type="text" [(ngModel)]="cualesProblemasCardiacos"  disabled="true"></ion-input>
+      </ion-item>
+      <ion-item col-3 no-border>
+        <ion-toggle [(ngModel)]="tieneProblemasCardiacos"  disabled="true" ></ion-toggle>
+      </ion-item>
+      <ion-item col-9>
+        <ion-label floating>¿Problemas Motores, cuales?</ion-label>
+        <ion-input type="text" [(ngModel)]="cualesProblemasMotores" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item col-3 no-border>
+        <ion-toggle [(ngModel)]="tieneProblemasMotores"  disabled="true"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>¿Tiene asma?</ion-label>
+        <ion-toggle [(ngModel)]="tieneAsma"  disabled="true"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Otra Enfermedad</ion-label>
+        <ion-input type="text" [(ngModel)]="otraEnfermedad"  disabled="true"></ion-input>
+      </ion-item>
+
+    </ion-row>
+    <ion-row *ngSwitchCase="'Otros'">
+      <ion-item>
+        <ion-label floating>Acudir a</ion-label>
+        <ion-input type="text" [(ngModel)]="dondeAcudir"  disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Teléfono Urgencia</ion-label>
+        <ion-input type="number" [(ngModel)]="numeroEmergencia" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Observaciones</ion-label>
+        <ion-input type="text" [(ngModel)]="observacion"  disabled="true"></ion-input>
+      </ion-item>
+    </ion-row>
+
+  </div>
+
+
+</ion-content>

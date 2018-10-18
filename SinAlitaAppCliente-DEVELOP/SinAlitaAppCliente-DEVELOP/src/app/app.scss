@@ -1,0 +1,163 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.gradiente {
+  background: rgba(179, 220, 237, 0.16);
+  background: -moz-linear-gradient(top, rgba(179, 220, 237, 0.16) 0%, rgba(41, 184, 229, 0.16) 0%, rgba(188, 224, 238, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 220, 237, 0.16)), color-stop(0%, rgba(41, 184, 229, 0.16)), color-stop(100%, rgba(188, 224, 238, 1)));
+  background: -webkit-linear-gradient(top, rgba(179, 220, 237, 0.16) 0%, rgba(41, 184, 229, 0.16) 0%, rgba(188, 224, 238, 1) 100%);
+  background: -o-linear-gradient(top, rgba(179, 220, 237, 0.16) 0%, rgba(41, 184, 229, 0.16) 0%, rgba(188, 224, 238, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(179, 220, 237, 0.16) 0%, rgba(41, 184, 229, 0.16) 0%, rgba(188, 224, 238, 1) 100%);
+  background: linear-gradient(to bottom, rgba(179, 220, 237, 0.16) 0%, rgba(41, 184, 229, 0.16) 0%, rgba(188, 224, 238, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0);
+}
+.toolbar-background-md {
+  border-color: transparent;
+  background: transparent;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  color: white;
+  background-color: transparent;
+}
+.toolbar-background-ios {
+  background: transparent;
+}
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+  color: white;
+  background-color: transparent;
+}
+.toolbar-title-ios {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: white;
+  pointer-events: auto;
+}
+.toolbar-title-md {
+  padding: 0 12px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+.icono-derecha{
+  font-size: 4em;
+  float: right;
+}
+.icono-izqueirda{
+  font-size: 4em;
+  float: left;
+}
+.fg-burlywood{
+  color: burlywood;
+}
+.icono-lista{
+  font-size: 2.6em;
+}
+.fg-darkgrey{
+  color: darkgrey;
+}
+.no-margin-top{
+  margin-top: 0;
+}
+.no-margin-bottom{
+  margin-bottom: 0;
+}
+.inferior-badge{
+  font-size: 0.8em;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+.bg-white{background: white;}
+.hide-card {
+  -webkit-box-shadow: none!important;
+}
+
+.custom-avatar {
+  height: 30vw;
+  width: 30vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bg-transparent{
+  background: transparent;}
+.fg-gray{
+  color: #444444;
+}
+.bg-pendiente{
+  background-color: coral;
+}
+.bg-terminada{
+  background-color: aqua;
+}
+.font-pequena{
+  font-size: 0.7em;
+}
+ion-select {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+.font-principal {
+  font-size: 1.3em;
+}
+.fg-primary{
+  color: #488aff;
+}
+.fg-secondary{
+  color: #32db64;
+}
+.fg-danger{
+  color: #f53d3d;
+}
+.fg-light{
+  color: #f4f4f4;
+}
+.fg-dark{
+  color: #222;
+}
+.toolbar-title {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.toolbar-ios ion-title {
+  left: 0;
+  top: 0;
+  padding: 0 5px 1px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  pointer-events: none;
+}
+.toolbar-title-ios {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: white;
+  pointer-events: auto;
+}
+
