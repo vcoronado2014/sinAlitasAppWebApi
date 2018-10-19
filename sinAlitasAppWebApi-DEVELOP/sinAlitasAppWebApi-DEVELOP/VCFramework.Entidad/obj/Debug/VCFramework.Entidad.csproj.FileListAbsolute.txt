@@ -1,0 +1,16 @@
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.dll
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.pdb
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.pdb
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
+D:\API_SINALITAS\WebApiSinAlitas\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojResolveAssemblyReference.cache
+C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojResolveAssemblyReference.cache
+D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.dll
+D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.pdb
+D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojAssemblyReference.cache
+D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csproj.CoreCompileInputs.cache
+D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
+D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
