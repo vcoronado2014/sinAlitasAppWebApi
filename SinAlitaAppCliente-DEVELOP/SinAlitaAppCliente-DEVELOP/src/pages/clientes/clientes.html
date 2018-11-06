@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header class="mui--bg-color-blue-600 fg-light">
+<ion-header class="mui--bg-color-blue-400 fg-light">
 
   <ion-navbar>
     <ion-title>Clientes</ion-title>
@@ -14,5 +14,63 @@
 
 
 <ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card>
+  
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-10>
+          Presione el botón si desea crear un nuevo Cliente.
+        </ion-col>
+        <ion-col col-2 rigth text-center>
+          <ion-icon (click)="nuevoCliente()" name="add-circle" style="zoom:2.5;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  
+  </ion-card>
+  <ion-item>
+    <ion-label floating *ngIf="encontrados > 0">{{encontrados}} coincidencias</ion-label>
+    <ion-label floating *ngIf="encontrados == 0">Ingrese texto a buscar</ion-label>
+    <!-- <ion-input type="text" #nombre></ion-input>-->
+    <ion-input type="text" [(ngModel)]="nombreBuscar"></ion-input>
+    <button ion-button outline item-end icon-start (click)="getClientesNombres()" small style="font-size: 1rem;">
+      <ion-icon name="search"></ion-icon>
+      Buscar 
+
+    </button>
+    <button ion-button outline item-end icon-start (click)="limpiarClientes()" small style="font-size: 1rem;">
+      <ion-icon name="remove-circle"></ion-icon>
+      Limpiar
+    </button>
+  </ion-item>
+  <ion-list>
+    <ion-item-sliding *ngFor="let prof of clientesArr">
+      <ion-item>
+        <ion-avatar item-start>
+          <text-avatar [text]="prof.NombreCompleto" item-left></text-avatar>
+        </ion-avatar>
+        <h2>{{prof.NombreCompleto}}</h2>
+        <p text-wrap >
+          <ion-icon name="pin"> <span style="font-size: 1.2rem;font-family: 'Roboto', 'Helvetica Neue', sans-serif;"> {{prof.Direccion}}</span></ion-icon>
+        </p>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" *ngIf="prof.Activo == 1" (click)="nuevoPack(prof)">
+          <ion-icon name="calendar"></ion-icon>
+          Packs
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary" *ngIf="prof.Activo == 1" (click)="editarCliente(prof)">
+          <ion-icon name="create"></ion-icon>
+          Editar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>

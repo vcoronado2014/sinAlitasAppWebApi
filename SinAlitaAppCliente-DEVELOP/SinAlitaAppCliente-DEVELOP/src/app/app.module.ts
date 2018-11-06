@@ -29,6 +29,10 @@ import { SupervisorPage } from '../pages/supervisor/supervisor';
 import { ClientesPage } from '../pages/clientes/clientes';
 import { PacksPage } from '../pages/packs/packs';
 import { ProfesoresPage } from '../pages/profesores/profesores';
+import { EditarProfesorPage } from '../pages/editar-profesor/editar-profesor';
+import { AsociarComunasPage } from '../pages/asociar-comunas/asociar-comunas';
+import { EditarClientePage } from '../pages/editar-cliente/editar-cliente';
+import { CrearPackPage } from '../pages/crear-pack/crear-pack';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { ProfesoresPage } from '../pages/profesores/profesores';
     ProfesoresPage,
     ClientesPage,
     PacksPage,
+    EditarProfesorPage,
+    AsociarComunasPage,
+    EditarClientePage,
+    CrearPackPage,
     TextAvatarDirective
   ],
   imports: [
@@ -70,6 +78,10 @@ import { ProfesoresPage } from '../pages/profesores/profesores';
     AceptaCondicionesPage,
     ClientesPage,
     ProfesoresPage,
+    EditarProfesorPage,
+    AsociarComunasPage,
+    EditarClientePage,
+    CrearPackPage,
     PacksPage
   ],
   providers: [

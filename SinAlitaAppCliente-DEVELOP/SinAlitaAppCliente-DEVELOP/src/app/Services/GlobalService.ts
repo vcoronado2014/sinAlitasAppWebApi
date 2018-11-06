@@ -45,6 +45,7 @@ export class GlobalService{
                 this.envoltorio = retorno;
                 this.persona = retorno;
                 this.nombreUsuario = usuario;
+                localStorage.setItem('USUARIO', this.nombreUsuario);
                 this.loggedIn = true;
               }
               else {
@@ -56,6 +57,99 @@ export class GlobalService{
         );
   
     }
+    postProfesores(){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Profesores';
+      let dataGet = { Usuario: usuario };
+  
+      let repos = this.http.post(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }
+    postClientes(){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Clientes';
+      let dataGet = { Usuario: usuario };
+  
+      let repos = this.http.post(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }
+    postComunas(profesor){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Comunas';
+      let dataGet = { IdProfesor: profesor.Id.toString() };
+  
+      let repos = this.http.post(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }
+    putProfesor(idProfesor, rut, nombres, primerApellido, segundoApellido, telefonos, sexo, correo, activo){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Profesores';
+      let dataGet = { 
+        IdProfesor: idProfesor,
+        Rut: rut,
+        Nombres: nombres,
+        PrimerApellido: primerApellido,
+        SegundoApellido: segundoApellido,
+        Telefonos: telefonos,
+        Sexo: sexo,
+        Correo: correo,
+        Activo: activo 
+      };
+  
+      let repos = this.http.put(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }
+    putCliente(idCliente, nombres, primerApellido, segundoApellido, regId, comId, telefonos, correo, direccion, activo){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Cliente';
+      let dataGet = { 
+        IdCliente: idCliente,
+        Nombres: nombres,
+        PrimerApellido: primerApellido,
+        SegundoApellido: segundoApellido,
+        Telefonos: telefonos,
+        RegId: regId,
+        ComId: comId,
+        Direccion: direccion,
+        Correo: correo,
+        Activo: activo 
+      };
+  
+      let repos = this.http.put(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }
+    putProfesorComunas(idProfesor, idsComunas){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Comunas';
+      let dataGet = { 
+        IdProfesor: idProfesor,
+        Comunas: idsComunas 
+      };
+  
+      let repos = this.http.put(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }
+    postComunasRegion(idRegion){
+      let url = AppSettings.URL_API + 'Territorio';
+      let dataGet = { IdRegion: idRegion.toString() };
+  
+      let repos = this.http.post(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
+    }    
     logout(): void {
         sessionStorage.clear();
         this.persona = null;
@@ -64,6 +158,16 @@ export class GlobalService{
     }
     isLoggedId(){
       return this.loggedIn;
+    }
+    postProductos(){
+      var usuario = localStorage.getItem("USUARIO");
+      let url = AppSettings.URL_API + 'Productos';
+      let dataGet = { Usuario: usuario };
+  
+      let repos = this.http.post(url, dataGet, {
+        headers: new Headers({'Content-Type': 'application/json'})
+      });
+      return repos;
     }
   
 }

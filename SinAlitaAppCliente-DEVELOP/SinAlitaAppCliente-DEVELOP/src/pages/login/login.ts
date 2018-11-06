@@ -26,8 +26,8 @@ import {AppSettings} from "../../../AppSettings";
   providers: [AuthService, AppAvailability]
 })
 export class LoginPage {
-  usuario;
-  clave;
+  usuario = "18062985-8";
+  clave = "18062985-8";
   isLogged: boolean;
 
   constructor(public navCtrl: NavController,
