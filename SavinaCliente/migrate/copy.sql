@@ -1,1 +1,0 @@
-SET IDENTITY_INSERT [$destDb].[dbo].[$destTable] ON INSERT [$destDb].[dbo].[$destTable] ($destFields) SELECT $sourceFields FROM [$sourceDb].[dbo].[$sourceTable] SET IDENTITY_INSERT [$destDb].[dbo].[$destTable] OFF

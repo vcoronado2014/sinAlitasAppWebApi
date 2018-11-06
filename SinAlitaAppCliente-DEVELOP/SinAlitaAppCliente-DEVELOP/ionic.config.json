@@ -1,8 +1,0 @@
-{
-  "name": "appSinAlitasCliente",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular",
-  "pro_id": "appSinalitas"
-}

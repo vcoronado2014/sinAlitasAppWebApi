@@ -1,6 +1,0 @@
-{
-  "templates": "client/assets/templates",
-  "scripts": "client/assets/scripts",
-  "styles": "client/assets/styles",
-  "fonts": "client/assets/fonts"
-}
