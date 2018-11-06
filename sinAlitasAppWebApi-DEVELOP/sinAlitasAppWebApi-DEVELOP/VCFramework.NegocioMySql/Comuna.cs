@@ -41,5 +41,65 @@ namespace VCFramework.NegocioMySql
 
             return entidad;
         }
+
+        public static List<VCFramework.Entidad.Comuna> Listar()
+        {
+            List<VCFramework.Entidad.Comuna> lista2 = new List<VCFramework.Entidad.Comuna>();
+
+            try
+            {
+                VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+                FiltroGenerico filtro = new FiltroGenerico();
+                filtro.Campo = "ELIMINADO";
+                filtro.TipoDato = TipoDatoGeneral.Entero;
+                filtro.Valor = "0";
+
+                List<object> lista = fac.Leer<VCFramework.Entidad.Comuna>(filtro, setCnsWebLun);
+                
+                if (lista != null)
+                {
+                    lista2 = lista.Cast<VCFramework.Entidad.Comuna>().ToList();
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                VCFramework.NegocioMySql.Utiles.Log(ex);
+            }
+
+            return lista2;
+        }
+
+        public static List<VCFramework.Entidad.Comuna> ListarPorRegion(int regId)
+        {
+            List<VCFramework.Entidad.Comuna> lista2 = new List<VCFramework.Entidad.Comuna>();
+
+            try
+            {
+                VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+                FiltroGenerico filtro = new FiltroGenerico();
+                filtro.Campo = "REG_ID";
+                filtro.TipoDato = TipoDatoGeneral.Entero;
+                filtro.Valor = regId.ToString();
+
+                List<object> lista = fac.Leer<VCFramework.Entidad.Comuna>(filtro, setCnsWebLun);
+
+                if (lista != null)
+                {
+                    lista2 = lista.Cast<VCFramework.Entidad.Comuna>().ToList();
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                VCFramework.NegocioMySql.Utiles.Log(ex);
+            }
+
+            return lista2;
+        }
     }
 }

@@ -222,6 +222,8 @@
     <Compile Include="Controllers\AgendaExcepcionFilter.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ComunasController.cs" />
     <Compile Include="Controllers\CupoController.cs" />
     <Compile Include="Controllers\EnvoltorioController.cs" />
     <Compile Include="Controllers\FichaAlumnoController.cs" />
@@ -229,7 +231,10 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductoCodigoController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
+    <Compile Include="Controllers\ProfesoresController.cs" />
+    <Compile Include="Controllers\TerritorioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -286,7 +291,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

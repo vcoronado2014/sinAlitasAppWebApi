@@ -130,6 +130,27 @@ namespace WebApiSinAlitas
             );
             #endregion
 
+            #region  Profesores
+            config.Routes.MapHttpRoute(
+                name: "Profesores",
+                routeTemplate: "api/Profesores",
+                defaults: new
+                {
+                    controller = "Profesores"
+                }
+            );
+            #endregion
+            #region  Comunas
+            config.Routes.MapHttpRoute(
+                name: "Comunas",
+                routeTemplate: "api/Comunas",
+                defaults: new
+                {
+                    controller = "Comunas"
+                }
+            );
+            #endregion
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

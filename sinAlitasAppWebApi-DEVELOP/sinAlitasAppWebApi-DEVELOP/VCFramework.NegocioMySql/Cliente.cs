@@ -42,6 +42,39 @@ namespace VCFramework.NegocioMySql
 
             return entidad;
         }
+        public static List<VCFramework.Entidad.Cliente> Listar()
+        {
+            List<VCFramework.Entidad.Cliente> lista2 = new List<VCFramework.Entidad.Cliente>();
 
+            try
+            {
+                VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+
+                List<object> lista = fac.Leer<VCFramework.Entidad.Cliente>(setCnsWebLun);
+
+                if (lista != null)
+                {
+                    lista2 = lista.Cast<VCFramework.Entidad.Cliente>().ToList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                VCFramework.NegocioMySql.Utiles.Log(ex);
+            }
+
+            return lista2;
+        }
+        public static int Insertar(Entidad.Cliente cliente)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Insertar<Entidad.Cliente>(cliente, setCnsWebLun);
+        }
+        public static int Modificar(Entidad.Cliente cliente)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Update<Entidad.Cliente>(cliente, setCnsWebLun);
+        }
     }
 }

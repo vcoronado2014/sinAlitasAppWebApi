@@ -24,6 +24,21 @@ namespace VCFramework.NegocioMySql
 
             return lista2;
         }
+        public static int UltimoId()
+        {
+            int max = 0;
+            if (ListarTodo() != null && ListarTodo().Count > 0 )
+            {
+                max = ListarTodo().Max(p => p.Id) + 1;
+            }
+            else
+            {
+                max = 1;
+            }
+            
+
+            return max;
+        }
         public static List<VCFramework.Entidad.ProductoCodigo> Listar()
         {
             VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();

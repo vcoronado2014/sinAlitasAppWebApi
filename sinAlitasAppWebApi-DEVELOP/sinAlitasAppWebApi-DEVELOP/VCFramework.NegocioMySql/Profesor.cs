@@ -81,5 +81,41 @@ namespace VCFramework.NegocioMySql
 
             return entidad;
         }
+
+        public static List<VCFramework.Entidad.Profesor> Listar()
+        {
+            List<VCFramework.Entidad.Profesor> lista2 = new List<VCFramework.Entidad.Profesor>();
+
+            try
+            {
+                VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+
+                List<object> lista = fac.Leer<VCFramework.Entidad.Profesor>(setCnsWebLun);
+                
+                if (lista != null)
+                {
+                    lista2 = lista.Cast<VCFramework.Entidad.Profesor>().ToList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                VCFramework.NegocioMySql.Utiles.Log(ex);
+            }
+
+            return lista2;
+        }
+
+        public static int Insertar(Entidad.Profesor profesor)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Insertar<Entidad.Profesor>(profesor, setCnsWebLun);
+        }
+        public static int Modificar(Entidad.Profesor profesor)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Update<Entidad.Profesor>(profesor, setCnsWebLun);
+        }
     }
 }

@@ -29,5 +29,6 @@ namespace VCFramework.Entidad
         public string Email { get; set; }
         public int NodId { get; set; }
         public int RolId { get; set; }
+        public string ComIdAsignada { get; set; }
     }
 }

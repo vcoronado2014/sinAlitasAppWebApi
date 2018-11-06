@@ -43,9 +43,11 @@
     <Compile Include="AceptaCondiciones.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Comuna.cs" />
+    <Compile Include="ComunaEnvoltorio.cs" />
     <Compile Include="Cupo.cs" />
     <Compile Include="Envoltorio.cs" />
     <Compile Include="EnvoltorioFicha.cs" />
+    <Compile Include="EnvoltorioProducto.cs" />
     <Compile Include="FichaAlumno.cs" />
     <Compile Include="FichaPack.cs" />
     <Compile Include="LogSistema.cs" />
