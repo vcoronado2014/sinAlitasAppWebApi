@@ -14,3 +14,9 @@ D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.
 D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csproj.CoreCompileInputs.cache
 D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
 D:\DESARROLLO\sinAlitasAppWebApi-DEVELOP\sinAlitasAppWebApi-DEVELOP\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
+D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.pdb
+D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojAssemblyReference.cache
+D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csproj.CoreCompileInputs.cache
+D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
