@@ -1,0 +1,10 @@
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csproj.CoreCompileInputs.cache
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csprojAssemblyReference.cache
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Negocio.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Negocio.pdb
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Entidad.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Negocio.Factory.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Entidad.pdb
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csproj.CopyComplete
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.pdb

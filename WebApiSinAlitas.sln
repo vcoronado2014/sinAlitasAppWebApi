@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSinAlitas", "WebApiSinAlitas\WebApiSinAlitas.csproj", "{5C8BB95A-6B67-42D7-9195-862596C57013}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VCFramework.Entidad", "VCFramework.Entidad\VCFramework.Entidad.csproj", "{CBECF1DE-87BB-491C-951F-03AF269921A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VCFramework.NegocioMySql", "VCFramework.NegocioMySql\VCFramework.NegocioMySql.csproj", "{518D7969-AA46-47C4-860D-8B8444033864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinAlitas.Admin.Entidad", "SinAlitas.Admin.Entidad\SinAlitas.Admin.Entidad.csproj", "{DE6B8AF1-4279-464C-9EF0-5EEF972D7575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinAlitas.Admin.Negocio", "SinAlitas.Admin.Negocio\SinAlitas.Admin.Negocio.csproj", "{DAEEFEB7-47AD-4E70-8F1C-443803980E93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +31,19 @@ Global
 		{518D7969-AA46-47C4-860D-8B8444033864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{518D7969-AA46-47C4-860D-8B8444033864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{518D7969-AA46-47C4-860D-8B8444033864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6B8AF1-4279-464C-9EF0-5EEF972D7575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6B8AF1-4279-464C-9EF0-5EEF972D7575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6B8AF1-4279-464C-9EF0-5EEF972D7575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6B8AF1-4279-464C-9EF0-5EEF972D7575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9306F17-0BC9-4237-ADE0-1A66E7C8A0B8}
 	EndGlobalSection
 EndGlobal

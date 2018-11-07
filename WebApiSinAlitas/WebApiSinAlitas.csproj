@@ -219,8 +219,10 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AceptaCondicionesController.cs" />
+    <Compile Include="Controllers\ActualizarAgendaController.cs" />
     <Compile Include="Controllers\AgendaExcepcionFilter.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
+    <Compile Include="Controllers\BuscarSegmentosController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\ComunasController.cs" />
@@ -321,6 +323,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SinAlitas.Admin.Entidad\SinAlitas.Admin.Entidad.csproj">
+      <Project>{de6b8af1-4279-464c-9ef0-5eef972d7575}</Project>
+      <Name>SinAlitas.Admin.Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SinAlitas.Admin.Negocio\SinAlitas.Admin.Negocio.csproj">
+      <Project>{daeefeb7-47ad-4e70-8f1c-443803980e93}</Project>
+      <Name>SinAlitas.Admin.Negocio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VCFramework.Entidad\VCFramework.Entidad.csproj">
       <Project>{cbecf1de-87bb-491c-951f-03af269921a0}</Project>
       <Name>VCFramework.Entidad</Name>

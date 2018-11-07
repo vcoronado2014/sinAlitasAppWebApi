@@ -424,3 +424,7 @@ F:\NUEVO_DESARROLLO\SINALITAS_APPS\API\sinAlitasAppWebApi\WebApiSinAlitas\obj\De
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API\sinAlitasAppWebApi\WebApiSinAlitas\obj\Debug\WebApiSinAlitas.csproj.CoreCompileInputs.cache
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API\sinAlitasAppWebApi\WebApiSinAlitas\obj\Debug\WebApiSinAlitas.dll
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API\sinAlitasAppWebApi\WebApiSinAlitas\obj\Debug\WebApiSinAlitas.pdb
+D:\apiSinAlitas\sinAlitasAppWebApi\WebApiSinAlitas\bin\SinAlitas.Admin.Entidad.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\WebApiSinAlitas\bin\SinAlitas.Admin.Negocio.dll
+D:\apiSinAlitas\sinAlitasAppWebApi\WebApiSinAlitas\bin\SinAlitas.Admin.Entidad.pdb
+D:\apiSinAlitas\sinAlitasAppWebApi\WebApiSinAlitas\bin\SinAlitas.Admin.Negocio.pdb
