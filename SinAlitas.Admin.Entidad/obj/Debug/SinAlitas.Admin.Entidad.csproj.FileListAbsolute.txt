@@ -4,3 +4,9 @@ D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Debug\SinAlitas.A
 D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.dll
 D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.pdb
 D:\apiSinAlitas\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.csprojAssemblyReference.cache
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Debug\SinAlitas.Admin.Entidad.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Debug\SinAlitas.Admin.Entidad.pdb
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.csprojResolveAssemblyReference.cache
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.csproj.CoreCompileInputs.cache
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.pdb

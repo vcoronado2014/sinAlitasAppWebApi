@@ -117,20 +117,24 @@ namespace WebApiSinAlitas.Controllers
                                 //si el cupo existe lo actualizamos
                                 if (cupoExsitente != null && cupoExsitente.Id > 0)
                                 {
-                                    cupoExsitente.Activo = 1;
-                                    cupoExsitente.ClieId = 0;
-                                    cupoExsitente.Descripcion = string.Empty;
-                                    cupoExsitente.Eliminado = 0;
-                                    cupoExsitente.EstadoCupo = 1;
-                                    cupoExsitente.FechaHoraInicio = fechaHoraInicio;
-                                    cupoExsitente.FechaHoraRegistro = DateTime.Now;
-                                    cupoExsitente.FechaHoraTermino = fechaHoraTermino;
-                                    cupoExsitente.NodId = int.Parse(nodId);
-                                    cupoExsitente.ProfId = int.Parse(profId);
-                                    cupoExsitente.SghId = idSeg;
+                                    if (cupoExsitente.ClieId == 0)
+                                    {
+                                        cupoExsitente.Activo = 1;
+                                        cupoExsitente.ClieId = 0;
+                                        cupoExsitente.Descripcion = string.Empty;
+                                        cupoExsitente.Eliminado = 0;
+                                        cupoExsitente.EstadoCupo = 1;
+                                        cupoExsitente.FechaHoraInicio = fechaHoraInicio;
+                                        cupoExsitente.FechaHoraRegistro = DateTime.Now;
+                                        cupoExsitente.FechaHoraTermino = fechaHoraTermino;
+                                        cupoExsitente.NodId = int.Parse(nodId);
+                                        cupoExsitente.ProfId = int.Parse(profId);
+                                        cupoExsitente.SghId = idSeg;
 
-                                    int id = SinAlitas.Admin.Negocio.Cupo.Actualizar(cupoExsitente);
-                                    contadorSalida++;
+                                        int id = SinAlitas.Admin.Negocio.Cupo.Actualizar(cupoExsitente);
+                                        contadorSalida++;
+                                    }
+
 
                                 }
                                 else
@@ -174,20 +178,24 @@ namespace WebApiSinAlitas.Controllers
                                 //si el cupo existe lo eliminamos
                                 if (cupoExsitente != null && cupoExsitente.Id > 0)
                                 {
-                                    cupoExsitente.Activo = 1;
-                                    cupoExsitente.ClieId = 0;
-                                    cupoExsitente.Descripcion = string.Empty;
-                                    cupoExsitente.Eliminado = 0;
-                                    cupoExsitente.EstadoCupo = 1;
-                                    cupoExsitente.FechaHoraInicio = fechaHoraInicio;
-                                    cupoExsitente.FechaHoraRegistro = DateTime.Now;
-                                    cupoExsitente.FechaHoraTermino = fechaHoraTermino;
-                                    cupoExsitente.NodId = int.Parse(nodId);
-                                    cupoExsitente.ProfId = int.Parse(profId);
-                                    cupoExsitente.SghId = idSeg;
+                                    if (cupoExsitente.ClieId == 0)
+                                    {
+                                        cupoExsitente.Activo = 1;
+                                        cupoExsitente.ClieId = 0;
+                                        cupoExsitente.Descripcion = string.Empty;
+                                        cupoExsitente.Eliminado = 0;
+                                        cupoExsitente.EstadoCupo = 1;
+                                        cupoExsitente.FechaHoraInicio = fechaHoraInicio;
+                                        cupoExsitente.FechaHoraRegistro = DateTime.Now;
+                                        cupoExsitente.FechaHoraTermino = fechaHoraTermino;
+                                        cupoExsitente.NodId = int.Parse(nodId);
+                                        cupoExsitente.ProfId = int.Parse(profId);
+                                        cupoExsitente.SghId = idSeg;
 
-                                    int id = SinAlitas.Admin.Negocio.Cupo.Eliminar(cupoExsitente);
-                                    contadorSalida++;
+                                        int id = SinAlitas.Admin.Negocio.Cupo.Eliminar(cupoExsitente);
+                                        contadorSalida++;
+                                    }
+
 
                                 }
                             }

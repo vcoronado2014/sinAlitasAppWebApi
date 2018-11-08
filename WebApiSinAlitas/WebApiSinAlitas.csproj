@@ -229,8 +229,10 @@
     <Compile Include="Controllers\CupoController.cs" />
     <Compile Include="Controllers\EnvoltorioController.cs" />
     <Compile Include="Controllers\FichaAlumnoController.cs" />
+    <Compile Include="Controllers\FichaAlumnoDeleteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ObtenerProductoCodigoGrillaController.cs" />
     <Compile Include="Controllers\ProductoCodigoController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />

@@ -16,6 +16,13 @@ namespace SinAlitas.Admin.Negocio
             int id = fac.Insertar<SinAlitas.Admin.Entidad.FichaPack>(alumno, setCnsWebLun);
             return id;
         }
+        public static int Eliminar(SinAlitas.Admin.Entidad.FichaPack alumno)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new Factory();
+
+            int id = fac.Delete<SinAlitas.Admin.Entidad.FichaPack>(alumno, setCnsWebLun);
+            return id;
+        }
         public static List<SinAlitas.Admin.Entidad.FichaPack> ObtenerFichasPack(int idPack)
         {
             Factory fac = new Factory();
