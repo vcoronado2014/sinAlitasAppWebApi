@@ -288,10 +288,10 @@ namespace SinAlitas.Admin.Negocio
                     bool tieneAceptaCondiciones = false;
                     bool tieneFicha = false;
                     //vamos a determinar los estados para devolver la grilla
-                    Entidad.AceptaCondiciones acpetaCondiciones = Negocio.AceptaCondiciones.ObtenerAceptaCondicionesPcoId(pro.ProId);
+                    Entidad.AceptaCondiciones acpetaCondiciones = Negocio.AceptaCondiciones.ObtenerAceptaCondicionesPcoId(pro.Id);
                     if (acpetaCondiciones != null && acpetaCondiciones.Id > 0)
                         tieneAceptaCondiciones = true;
-                    List<Entidad.FichaPack> fichas = Negocio.FichaPack.ObtenerFichasPack(pro.ProId);
+                    List<Entidad.FichaPack> fichas = Negocio.FichaPack.ObtenerFichasPack(pro.Id);
                     if (fichas != null && fichas.Count > 0)
                         tieneFicha = true;
 

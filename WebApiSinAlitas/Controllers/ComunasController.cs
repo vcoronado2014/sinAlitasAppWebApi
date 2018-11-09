@@ -209,5 +209,31 @@ namespace WebApiSinAlitas.Controllers
 
             return httpResponse;
         }
+
+        [System.Web.Http.AcceptVerbs("GET")]
+        public HttpResponseMessage Get([FromUri]string Parametro)
+        {
+            //Parametro: { "TokenAcceso":"2BFFDCEAECCF9BE7698E1BA7593EB28C"}
+
+            HttpResponseMessage httpResponse = new HttpResponseMessage();
+
+            try
+            {
+                string idComuna = Parametro;
+                SinAlitas.Admin.Entidad.Comuna comuna = SinAlitas.Admin.Negocio.Territorio.ObtenerComunanPorId(int.Parse(idComuna));
+
+                httpResponse = new HttpResponseMessage(HttpStatusCode.OK);
+                String JSON = JsonConvert.SerializeObject(comuna);
+                httpResponse.Content = new StringContent(JSON);
+                httpResponse.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(VCFramework.NegocioMySql.Utiles.JSON_DOCTYPE);
+
+            }
+            catch (Exception ex)
+            {
+                httpResponse = new HttpResponseMessage(HttpStatusCode.ExpectationFailed);
+                throw ex;
+            }
+            return httpResponse;
+        }
     }
 }
