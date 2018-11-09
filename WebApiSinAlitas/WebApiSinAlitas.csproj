@@ -224,6 +224,7 @@
     <Compile Include="Controllers\AlumnosController.cs" />
     <Compile Include="Controllers\BuscarSegmentosController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ClientePaackProductoController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\ComunasController.cs" />
     <Compile Include="Controllers\CupoController.cs" />
