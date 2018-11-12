@@ -281,7 +281,7 @@ namespace SinAlitas.Admin.Negocio
             CultureInfo cultura = new CultureInfo("es-CL");
             //en este caso de los clientes se muestran solo los 7 días siguientes
 
-            int cantidadDiasConsultar = 60;
+            int cantidadDiasConsultar = 90;
             //proecsamos la fecha
             DateTime fechaProfesar = DateTime.Now.AddHours(23);
             DateTime fechaInicio = Convert.ToDateTime(fechaProfesar.ToShortDateString() + " 06:00");
@@ -318,6 +318,7 @@ namespace SinAlitas.Admin.Negocio
 
             List<object> lista = fac.Leer<SinAlitas.Admin.Entidad.Cupo>(filtros, setCnsWebLun);
             List<SinAlitas.Admin.Entidad.Cupo> lista2 = new List<Entidad.Cupo>();
+            List<SinAlitas.Admin.Entidad.Cupo> lista3 = new List<Entidad.Cupo>();
             if (lista != null)
             {
 
@@ -326,7 +327,57 @@ namespace SinAlitas.Admin.Negocio
             if (lista2 != null && lista2.Count > 0)
                 lista2 = lista2.FindAll(p => p.FechaHoraInicio >= fechaInicio && p.FechaHoraTermino <= fechaTermino);
 
-            return lista2;
+            if (lista2 != null && lista2.Count > 0)
+            {
+                //lista2.Where(p=>p.SghId)
+                //lista3 = lista2.Distinct().ToList();
+                var DistinctItems = lista2.GroupBy(x => x.FechaHoraInicio).Select(y => y.First());
+                if (DistinctItems != null)
+                {
+                    foreach (var item in DistinctItems)
+                    {
+                        //Add to other List
+                        lista3.Add(item);
+                    }
+                }
+            }
+            List<Entidad.Cupo> listaCuposDuplicados = new List<Entidad.Cupo>();
+            if (lista3 != null && lista3.Count > 0)
+            {
+                //debemos verificar si tiene sus segmentos ocupados o no antes de mostrarlos
+                foreach (SinAlitas.Admin.Entidad.Cupo cpPro in lista3)
+                {
+                    //verifica segmento
+                    List<Entidad.Cupo> cupoQuitar = SinAlitas.Admin.Negocio.Cupo.ListarCuposEliminar(cpPro.ProfId, cpPro.SghId, Entidad.Utiles.RetornaFechaEntera(cpPro.FechaHoraInicio));
+                    if (cupoQuitar != null && cupoQuitar.Count > 1)
+                    {
+                        if (cupoQuitar.Exists(p => p.ClieId > 0))
+                        {
+                            //ahora hay que eliminar el cupo con clie id 0 de la lista 3
+                            Entidad.Cupo cupoEliminar = cupoQuitar.Find(p => p.ClieId == 0);
+                            if (cupoEliminar != null && cupoEliminar.Id > 0)
+                            {
+                                listaCuposDuplicados.Add(cupoEliminar);
+                                //lista3.Remove(cupoEliminar);
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (listaCuposDuplicados != null && listaCuposDuplicados.Count > 0)
+            {
+                lista3.RemoveAll(r => listaCuposDuplicados.Any(a => a.Id == r.Id));
+
+                foreach (SinAlitas.Admin.Entidad.Cupo cpProw in listaCuposDuplicados)
+                {
+                    Negocio.Cupo.Eliminar(cpProw);
+                }
+            }
+            if (lista3 != null && lista3.Count > 0)
+                return lista3;
+            else
+                return lista2;
         }
         public static List<SinAlitas.Admin.Entidad.Cupo> ListarCuposEliminar(int profId, int sgh_id, int fechaInicioEntera, int idOriginal)
         {
@@ -533,7 +584,7 @@ namespace SinAlitas.Admin.Negocio
             CultureInfo cultura = new CultureInfo("es-CL");
             //en este caso de los clientes se muestran solo la cantidadCupos disponibles de los días siguientes
 
-            int cantidadDiasConsultar = 60;
+            int cantidadDiasConsultar = 90;
             Entidad.Cupo cupoReagendar = Negocio.Cupo.ObtenerCupoPorId(cupoIdReagendar);
             //proecsamos la fecha
             DateTime fechaProfesar = DateTime.MinValue;

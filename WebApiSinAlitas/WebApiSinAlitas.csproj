@@ -231,6 +231,7 @@
     <Compile Include="Controllers\EnvoltorioController.cs" />
     <Compile Include="Controllers\FichaAlumnoController.cs" />
     <Compile Include="Controllers\FichaAlumnoDeleteController.cs" />
+    <Compile Include="Controllers\GuardarCuposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ObtenerProductoCodigoGrillaController.cs" />
