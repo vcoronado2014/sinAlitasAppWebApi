@@ -13,5 +13,7 @@ namespace SinAlitas.Admin.Entidad
 
         public string UrlAbrir { get; set; }
         public bool MostrarAbrir { get; set; }
+        public string Alerta { get; set; }
+        public bool TieneAgenda { get; set; }
     }
 }

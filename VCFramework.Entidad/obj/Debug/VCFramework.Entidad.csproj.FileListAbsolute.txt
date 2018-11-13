@@ -28,7 +28,7 @@ F:\NUEVO_DESARROLLO\SINALITAS_APPS\API\sinAlitasAppWebApi\VCFramework.Entidad\ob
 D:\apiSinAlitas\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojAssemblyReference.cache
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.dll
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.pdb
-F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojResolveAssemblyReference.cache
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csproj.CoreCompileInputs.cache
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojResolveAssemblyReference.cache

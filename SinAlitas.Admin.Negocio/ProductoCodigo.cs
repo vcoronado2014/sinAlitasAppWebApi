@@ -391,6 +391,19 @@ namespace SinAlitas.Admin.Negocio
                         pr.MostrarAbrir = true;
                     else
                         pr.MostrarAbrir = false;
+                    //hay que buscar tambien la cantidad de clases agendadas, si tiene o no y cuantas son
+                    //para compararlas con las programadas
+                    List<SinAlitas.Admin.Entidad.Cupo> cuposTomados = Negocio.Cupo.ListarCuposProductoCodigo(pro.Id);
+                    if (cuposTomados != null && cuposTomados.Count > 0)
+                    {
+                        pr.TieneAgenda = true;
+                        //si existen cupos tomados entonces debemos marcar de alguna forma este pack
+                        if (int.Parse(cantidadClases) > cuposTomados.Count)
+                        {
+                            int diferencia = int.Parse(cantidadClases) - cuposTomados.Count;
+                            pr.Alerta = "Faltan " + diferencia.ToString() + " clases por agendar.";
+                        }
+                    }
 
                     if (agregar)
                         lista.Add(pr);
