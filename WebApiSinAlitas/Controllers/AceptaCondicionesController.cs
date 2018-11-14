@@ -94,8 +94,12 @@ namespace WebApiSinAlitas.Controllers
                 int nuevoId = VCFramework.NegocioMySql.AceptaCondiciones.Insertar(acpeta);
                 acpeta.Id = nuevoId;
 
+                //esto lo modificamos para que pueda irse directo del acepta condiciones al detalle del pack y crear los alumnos
+
+                VCFramework.Entidad.Envoltorio producto = VCFramework.NegocioMySql.Envoltorio.ObtenerEnvoltorio(int.Parse(idPack));
+
                 httpResponse = new HttpResponseMessage(HttpStatusCode.OK);
-                String JSON = JsonConvert.SerializeObject(acpeta);
+                String JSON = JsonConvert.SerializeObject(producto);
                 httpResponse.Content = new StringContent(JSON);
                 httpResponse.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(VCFramework.NegocioMySql.Utiles.JSON_DOCTYPE);
 

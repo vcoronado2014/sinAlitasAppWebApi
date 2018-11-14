@@ -88,6 +88,37 @@ namespace VCFramework.NegocioMySql
             return entidad;
         }
 
+        public static VCFramework.Entidad.ProductoCodigo ObtenerPorCodigoPack(int idPack)
+        {
+            VCFramework.Entidad.ProductoCodigo entidad = new Entidad.ProductoCodigo();
+
+            try
+            {
+                VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+                FiltroGenerico filtro = new FiltroGenerico();
+                filtro.Campo = "ID";
+                filtro.TipoDato = TipoDatoGeneral.Entero;
+                filtro.Valor = idPack.ToString();
+
+                List<object> lista = fac.Leer<VCFramework.Entidad.ProductoCodigo>(filtro, setCnsWebLun);
+                List<VCFramework.Entidad.ProductoCodigo> lista2 = new List<VCFramework.Entidad.ProductoCodigo>();
+                if (lista != null)
+                {
+                    lista2 = lista.Cast<VCFramework.Entidad.ProductoCodigo>().ToList();
+                }
+                if (lista2 != null && lista2.Count == 1)
+                    entidad = lista2[0];
+
+
+            }
+            catch (Exception ex)
+            {
+                VCFramework.NegocioMySql.Utiles.Log(ex);
+            }
+
+            return entidad;
+        }
+
         public static int Insertar(Entidad.ProductoCodigo pro)
         {
             VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();

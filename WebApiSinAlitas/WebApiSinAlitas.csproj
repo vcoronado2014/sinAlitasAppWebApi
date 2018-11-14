@@ -242,6 +242,7 @@
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\ProfesorCupoController.cs" />
     <Compile Include="Controllers\ProfesoresController.cs" />
+    <Compile Include="Controllers\TareasProfesorController.cs" />
     <Compile Include="Controllers\TerritorioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
