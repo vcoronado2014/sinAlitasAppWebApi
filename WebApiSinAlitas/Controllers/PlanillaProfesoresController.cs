@@ -497,18 +497,19 @@ namespace WebApiSinAlitas.Controllers
             dynamic data = JObject.Parse(Input);
 
             //validaciones antes de ejecutar la llamada.
-            if (data.ClieId == null)
-                throw new ArgumentNullException("Id");
+            if (data.FechaEntera == null)
+                throw new ArgumentNullException("FechaEntera");
 
 
             HttpResponseMessage httpResponse = new HttpResponseMessage();
             try
             {
-                string clieId = data.ClieId;
+                string fechaEntera = data.FechaEntera;
+                DateTime fechaConsulta = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(int.Parse(fechaEntera));
 
 
                 List<VCFramework.Entidad.FichaAlumno> alumnos = new List<VCFramework.Entidad.FichaAlumno>();
-                DateTime fechaInicio = DateTime.Now;
+                DateTime fechaInicio = fechaConsulta;
                 #region codigo
                 int hoy = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio);
                 int diaDos = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(1));
