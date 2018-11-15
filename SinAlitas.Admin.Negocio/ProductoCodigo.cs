@@ -412,6 +412,175 @@ namespace SinAlitas.Admin.Negocio
             return lista;
         }
 
+        public static List<Entidad.ProductoCodigoTexto> ObtenerProductoCodigoGrillaProfesor(int estado, string codigo, string profId)
+        {
+            List<int> idsClientes = new List<int>();
+            List<Entidad.ProductoCodigoTexto> lista = new List<Entidad.ProductoCodigoTexto>();
+            //List<Entidad.ProductoCodigo> listaProcesar = ObtenerProductosCodigoPorEstado(estado);
+            //List<Entidad.ProductoCodigo> listaProcesar = ObtenerProductosCodigo();
+            List<Entidad.Cupo> cuposConCliente = SinAlitas.Admin.Negocio.Cupo.ListarCuposDelProfesor(int.Parse(profId));
+            if (cuposConCliente != null && cuposConCliente.Count > 0)
+            {
+                foreach(Entidad.Cupo cpo in cuposConCliente)
+                {
+                    idsClientes.Add(cpo.ClieId);
+                }
+            }
+            List<Entidad.ProductoCodigo> nuevaLista = new List<Entidad.ProductoCodigo>();
+            List<Entidad.ProductoCodigo> listaProcesar = ObtenerProductosCodigo();
+            if (listaProcesar != null && listaProcesar.Count > 0)
+            {
+                foreach(Entidad.ProductoCodigo pdto in listaProcesar)
+                {
+                    if (idsClientes.Exists(p=> p == pdto.ClieId))
+                    {
+                        nuevaLista.Add(pdto);
+                    }
+                }
+            }
+            //asignamos la nueva lista
+            listaProcesar = nuevaLista;
+
+            if (listaProcesar != null && listaProcesar.Count > 0)
+            {
+                
+
+                if (codigo != null && codigo != "")
+                {
+                    listaProcesar = listaProcesar.FindAll(p => p.CodigoCliente.ToUpper() == codigo.ToUpper());
+                    estado = 0;
+                }
+
+                foreach (Entidad.ProductoCodigo pro in listaProcesar)
+                {
+                    bool agregar = false;
+                    bool tieneAceptaCondiciones = false;
+                    bool tieneFicha = false;
+                    //vamos a determinar los estados para devolver la grilla
+                    Entidad.AceptaCondiciones acpetaCondiciones = Negocio.AceptaCondiciones.ObtenerAceptaCondicionesPcoId(pro.Id);
+                    if (acpetaCondiciones != null && acpetaCondiciones.Id > 0)
+                        tieneAceptaCondiciones = true;
+                    List<Entidad.FichaPack> fichas = Negocio.FichaPack.ObtenerFichasPack(pro.Id);
+                    if (fichas != null && fichas.Count > 0)
+                        tieneFicha = true;
+
+
+                    string nombrePack = string.Empty;
+                    string nombreCliente = string.Empty;
+                    string region = string.Empty;
+                    string comuna = string.Empty;
+                    string cantidadAlumnos = string.Empty;
+                    string cantidadClases = string.Empty;
+                    string direccion = string.Empty;
+                    string estadoT = string.Empty;
+                    switch (pro.Estado)
+                    {
+                        case 0:
+                            estadoT = "Todos";
+                            break;
+                        case 1:
+                            estadoT = "Creado por El Supervisor";
+                            break;
+                        case 2:
+                            estadoT = "Aceptado por el Cliente";
+                            break;
+                        case 3:
+                            estadoT = "En Curso";
+                            break;
+                        case 4:
+                            estadoT = "Terminado";
+                            break;
+                    }
+
+                    Entidad.Cliente cliente = Negocio.Cliente.ObtenerClientePorId(pro.ClieId);
+                    if (cliente.Id > 0)
+                    {
+                        nombreCliente = cliente.Nombres + " " + cliente.PrimerApellido + " " + cliente.SegundoApellido;
+                        region = Negocio.Territorio.ObtenerRegionPorId(cliente.RegId).Nombre;
+                        comuna = Negocio.Territorio.ObtenerComunanPorId(cliente.ComId).Nombre;
+                        direccion = cliente.Direccion;
+                    }
+                    nombrePack = pro.CodigoCliente;
+                    cantidadAlumnos = pro.CantidadAlumnos.ToString();
+                    cantidadClases = pro.CantidadClases.ToString();
+                    //armamos al respuesta.
+                    Entidad.ProductoCodigoTexto pr = new Entidad.ProductoCodigoTexto();
+                    pr.EstaPagado = false;
+                    string estaPagado = "NO PAGADO.";
+                    if (pro.EstaPagado == 1)
+                    {
+                        pr.EstaPagado = true;
+                        estaPagado = "PAGADO.";
+                    }
+                    pr.Id = pro.Id;
+
+                    pr.UrlAbrir = "SeleccionHorasCliente.aspx?PCO_ID=" + pro.Id.ToString();
+
+                    switch (estado)
+                    {
+                        case 0:
+                            agregar = true;
+                            estadoT = "Todos";
+                            break;
+                        case 1:
+                            agregar = true;
+                            estadoT = "Creado por El Supervisor";
+                            break;
+                        case 2:
+                            //si esta aceptada por el cliente entonces se agrega en este estado
+                            if (tieneAceptaCondiciones)
+                            {
+                                agregar = true;
+                                estadoT = "Aceptado por el Cliente";
+                            }
+                            break;
+                        case 3:
+                            //si tiene ficha esta en este estado
+                            if (tieneFicha)
+                            {
+                                agregar = true;
+                                estadoT = "En Curso";
+                            }
+                            break;
+                    }
+                    string textoAcepta = "";
+                    string textoFicha = "";
+                    if (tieneAceptaCondiciones == false)
+                        textoAcepta = "No ha aceptado condiciones";
+                    else
+                        textoAcepta = "Ha aceptado condiciones";
+
+                    if (tieneFicha == false)
+                        textoFicha = "No ha creado las fichas de los alumnos";
+                    else
+                        textoFicha = "Tiene fichas de los alumnos creada";
+
+                    pr.Texto = nombrePack + " ,creado el " + pro.FechaCreacion.ToShortDateString() + ", para el cliente " + nombreCliente + " que vive en " + direccion + ", " + comuna + ", " + region + " cuenta con " + cantidadClases + " clases y " + cantidadAlumnos + " alumnos programados, se encuentra en estado " + estadoT + ", el pack esta " + estaPagado + ", " + textoAcepta + ", " + textoFicha;
+                    if (tieneFicha && tieneAceptaCondiciones)
+                        pr.MostrarAbrir = true;
+                    else
+                        pr.MostrarAbrir = false;
+                    //hay que buscar tambien la cantidad de clases agendadas, si tiene o no y cuantas son
+                    //para compararlas con las programadas
+                    List<SinAlitas.Admin.Entidad.Cupo> cuposTomados = Negocio.Cupo.ListarCuposProductoCodigo(pro.Id);
+                    if (cuposTomados != null && cuposTomados.Count > 0)
+                    {
+                        pr.TieneAgenda = true;
+                        //si existen cupos tomados entonces debemos marcar de alguna forma este pack
+                        if (int.Parse(cantidadClases) > cuposTomados.Count)
+                        {
+                            int diferencia = int.Parse(cantidadClases) - cuposTomados.Count;
+                            pr.Alerta = "Faltan " + diferencia.ToString() + " clases por agendar.";
+                        }
+                    }
+
+                    if (agregar)
+                        lista.Add(pr);
+                }
+            }
+            return lista;
+        }
+
         public static List<Entidad.ProductoCodigoTexto> ObtenerProductoCodigoGrillaCliente(string nombrePackP)
         {
             List<Entidad.ProductoCodigoTexto> lista = new List<Entidad.ProductoCodigoTexto>();

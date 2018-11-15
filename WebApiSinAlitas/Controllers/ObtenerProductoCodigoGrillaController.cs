@@ -36,15 +36,33 @@ namespace WebApiSinAlitas.Controllers
                 throw new ArgumentNullException("Codigo");
 
 
+
             HttpResponseMessage httpResponse = new HttpResponseMessage();
             try
             {
+                //veamos si viene un id de profesor, para entregar los packs de ese profesor
+                int profId = 0;
+                if (data.ProfId != null)
+                {
+                    if (data.ProfId != "")
+                    {
+                        string id = data.ProfId;
+                        profId = int.Parse(id);
+                    }
+                }
                 string estado = data.Estado;
                 string codigo = data.Codigo;
 
-
+                List<SinAlitas.Admin.Entidad.ProductoCodigoTexto> producto = new List<SinAlitas.Admin.Entidad.ProductoCodigoTexto>();
                 //VCFramework.Entidad.ProductoCodigo producto = VCFramework.NegocioMySql.ProductoCodigo.ObtenerPorCodigoPack(nombre);
-                List<SinAlitas.Admin.Entidad.ProductoCodigoTexto> producto = SinAlitas.Admin.Negocio.ProductoCodigo.ObtenerProductoCodigoGrilla(int.Parse(estado), codigo);
+                if (profId > 0)
+                {
+                    producto = SinAlitas.Admin.Negocio.ProductoCodigo.ObtenerProductoCodigoGrillaProfesor(int.Parse(estado), codigo, profId.ToString());
+                }
+                else
+                {
+                    producto = SinAlitas.Admin.Negocio.ProductoCodigo.ObtenerProductoCodigoGrilla(int.Parse(estado), codigo);
+                }
 
 
                 if (producto != null)

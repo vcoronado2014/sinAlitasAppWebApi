@@ -209,6 +209,46 @@ namespace SinAlitas.Admin.Negocio
             return lista2;
         }
 
+        public static List<SinAlitas.Admin.Entidad.Cupo> ListarCuposDelProfesor(int profId)
+        {
+            Factory fac = new Factory();
+            FiltroGenerico filtro = new FiltroGenerico();
+            filtro.Campo = "ELIMINADO";
+            filtro.Valor = "0";
+            filtro.TipoDato = TipoDatoGeneral.Entero;
+
+            FiltroGenerico filtro1 = new FiltroGenerico();
+            filtro1.Campo = "ACTIVO";
+            filtro1.Valor = "1";
+            filtro1.TipoDato = TipoDatoGeneral.Entero;
+
+
+            FiltroGenerico filtro3 = new FiltroGenerico();
+            filtro3.Campo = "PROF_ID";
+            filtro3.Valor = profId.ToString();
+            filtro3.TipoDato = TipoDatoGeneral.Entero;
+
+
+
+            List<FiltroGenerico> filtros = new List<FiltroGenerico>();
+            filtros.Add(filtro);
+            filtros.Add(filtro1);
+            filtros.Add(filtro3);
+
+            List<object> lista = fac.Leer<SinAlitas.Admin.Entidad.Cupo>(filtros, setCnsWebLun);
+            List<SinAlitas.Admin.Entidad.Cupo> lista2 = new List<Entidad.Cupo>();
+            if (lista != null)
+            {
+
+                lista2 = lista.Cast<Entidad.Cupo>().ToList();
+            }
+            if (lista2.Count > 0)
+            {
+                lista2 = lista2.FindAll(p => p.ClieId > 0);
+            }
+            return lista2;
+        }
+
         public static SinAlitas.Admin.Entidad.Cupo ObtenerCupo(int nodId, int profId, int sghId, DateTime fechaHoraInicio)
         {
             SinAlitas.Admin.Entidad.Cupo cupo = new Entidad.Cupo();
