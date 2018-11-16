@@ -414,7 +414,7 @@ namespace SinAlitas.Admin.Negocio
 
         public static List<Entidad.ProductoCodigoTexto> ObtenerProductoCodigoGrillaProfesor(int estado, string codigo, string profId)
         {
-            List<int> idsClientes = new List<int>();
+            List<int> idsPco = new List<int>();
             List<Entidad.ProductoCodigoTexto> lista = new List<Entidad.ProductoCodigoTexto>();
             //List<Entidad.ProductoCodigo> listaProcesar = ObtenerProductosCodigoPorEstado(estado);
             //List<Entidad.ProductoCodigo> listaProcesar = ObtenerProductosCodigo();
@@ -423,7 +423,7 @@ namespace SinAlitas.Admin.Negocio
             {
                 foreach(Entidad.Cupo cpo in cuposConCliente)
                 {
-                    idsClientes.Add(cpo.ClieId);
+                    idsPco.Add(cpo.PcoId);
                 }
             }
             List<Entidad.ProductoCodigo> nuevaLista = new List<Entidad.ProductoCodigo>();
@@ -432,7 +432,7 @@ namespace SinAlitas.Admin.Negocio
             {
                 foreach(Entidad.ProductoCodigo pdto in listaProcesar)
                 {
-                    if (idsClientes.Exists(p=> p == pdto.ClieId))
+                    if (idsPco.Exists(p=> p == pdto.Id))
                     {
                         nuevaLista.Add(pdto);
                     }

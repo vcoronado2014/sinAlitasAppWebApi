@@ -223,6 +223,7 @@
     <Compile Include="Controllers\AgendaExcepcionFilter.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
     <Compile Include="Controllers\BuscarSegmentosController.cs" />
+    <Compile Include="Controllers\CerrarClaseController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\ClientePaackProductoController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
@@ -243,6 +244,7 @@
     <Compile Include="Controllers\ProfesorCupoController.cs" />
     <Compile Include="Controllers\ProfesoresController.cs" />
     <Compile Include="Controllers\TareasProfesorController.cs" />
+    <Compile Include="Controllers\TareasProfesorRealizadasController.cs" />
     <Compile Include="Controllers\TerritorioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">

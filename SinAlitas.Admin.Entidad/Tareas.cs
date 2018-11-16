@@ -21,6 +21,8 @@ namespace SinAlitas.Admin.Entidad
 
         public string CodigoCliente { get; set; }
         public string TelefonoCliente { get; set; }
+        public bool PuedeCancelar { get; set; }
+        public bool PuedeCerrar { get; set; }
     }
     public class TareasEnvoltorio
     {

@@ -262,10 +262,14 @@ namespace SinAlitas.Admin.Negocio
                             if (tarea1.FechaHoraTermino <= cstTime)
                             {
                                 tarea1.ClaseVisible = "fa fa-2x fa-hand-o-right";
+                                //tarea1.PuedeCancelar = false;
+                                //tarea1.PuedeCerrar = true;
                             }
                             else
                             {
                                 tarea1.ClaseVisible = "fa fa-2x fa-hand-o-right hidden";
+                                //tarea1.PuedeCancelar = true;
+                                //tarea1.PuedeCerrar = false;
                             }
                             if (prodCod != null && prodCod.Count == 1)
                                 tarea1.CodigoCliente = prodCod[0].CodigoCliente;
@@ -279,6 +283,8 @@ namespace SinAlitas.Admin.Negocio
                                 //no se debe mostrar la opcion de cancelar la hora
                                 tarea1.ClaseVisibleCancelar = "fa fa-2x fa-trash hidden";
                                 tarea1.ClaseVisibleReagendar = "fa fa-2x fa-calendar-o hidden";
+                                tarea1.PuedeCancelar = false;
+                                tarea1.PuedeCerrar = true;
                             }
                             else
                             {
@@ -288,11 +294,15 @@ namespace SinAlitas.Admin.Negocio
                                 {
                                     tarea1.ClaseVisibleCancelar = "fa fa-2x fa-trash";
                                     tarea1.ClaseVisibleReagendar = "fa fa-2x fa-calendar-o";
+                                    tarea1.PuedeCancelar = true;
+                                    tarea1.PuedeCerrar = false;
                                 }
                                 else
                                 {
                                     tarea1.ClaseVisibleCancelar = "fa fa-2x fa-trash hidden";
                                     tarea1.ClaseVisibleReagendar = "fa fa-2x fa-calendar-o hidden";
+                                    tarea1.PuedeCancelar = false;
+                                    tarea1.PuedeCerrar = true;
                                 }
                             }
                             tarea.TareasMostrar.Add(tarea1);
@@ -377,6 +387,8 @@ namespace SinAlitas.Admin.Negocio
                                 tarea1.Descripcion = obsProfe[0].Observacion;
                             else
                                 tarea1.Descripcion = "";
+                            tarea1.PuedeCancelar = false;
+                            tarea1.PuedeCerrar = false;
 
                             tarea.TareasMostrar.Add(tarea1);
                         }
