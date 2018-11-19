@@ -1,0 +1,12 @@
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\SinAlitas.Admin.Negocio.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\SinAlitas.Admin.Negocio.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\VCFramework.Negocio.Factory.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\SinAlitas.Admin.Entidad.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Release\SinAlitas.Admin.Negocio.csprojAssemblyReference.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Release\SinAlitas.Admin.Negocio.csproj.CoreCompileInputs.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Release\SinAlitas.Admin.Negocio.csproj.CopyComplete
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Release\SinAlitas.Admin.Negocio.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Release\SinAlitas.Admin.Negocio.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\VCFramework.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Release\VCFramework.Entidad.pdb

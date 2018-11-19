@@ -167,3 +167,7 @@ C:\sinalitas_app\sinAlitasAppWebApi\WebApiSinAlitas\bin\System.Web.Http.Owin.xml
 C:\sinalitas_app\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.csprojResolveAssemblyReference.cache
 C:\sinalitas_app\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.dll
 C:\sinalitas_app\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.pdb
+D:\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.csprojAssemblyReference.cache
+D:\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.csproj.CoreCompileInputs.cache
+D:\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.dll
+D:\sinAlitasAppWebApi\WebApiSinAlitas\obj\Release\WebApiSinAlitas.pdb

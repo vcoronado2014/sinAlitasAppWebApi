@@ -17,3 +17,15 @@ F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Nego
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csproj.CoreCompileInputs.cache
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.dll
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Negocio.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Negocio.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Negocio.Factory.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\SinAlitas.Admin.Entidad.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csprojAssemblyReference.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csproj.CoreCompileInputs.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.csproj.CopyComplete
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Entidad.pdb

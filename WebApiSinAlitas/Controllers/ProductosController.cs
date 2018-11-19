@@ -39,9 +39,11 @@ namespace WebApiSinAlitas.Controllers
             {
                 string usuario = data.Usuario;
 
-                VCFramework.Entidad.EnvoltorioProducto envoltorio = new EnvoltorioProducto();
-                envoltorio.Productos = VCFramework.NegocioMySql.Producto.Listar();
-                envoltorio.UltimoId = VCFramework.NegocioMySql.ProductoCodigo.UltimoId();
+                VCFramework.Entidad.EnvoltorioProducto envoltorio = new VCFramework.Entidad.EnvoltorioProducto
+                {
+                    Productos = VCFramework.NegocioMySql.Producto.Listar(),
+                    UltimoId = VCFramework.NegocioMySql.ProductoCodigo.UltimoId()
+                };
                 //List<VCFramework.Entidad.Producto> producto = VCFramework.NegocioMySql.Producto.Listar();
 
 

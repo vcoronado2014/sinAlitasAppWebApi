@@ -46,7 +46,7 @@ namespace WebApiSinAlitas.Controllers
                 List<VCFramework.Entidad.Comuna> comunasDisponibles = new List<VCFramework.Entidad.Comuna>();
                 List<VCFramework.Entidad.Comuna> comunasProfesor = new List<VCFramework.Entidad.Comuna>();
 
-                VCFramework.Entidad.ComunaEnvoltorio devolver = new ComunaEnvoltorio();
+                VCFramework.Entidad.ComunaEnvoltorio devolver = new VCFramework.Entidad.ComunaEnvoltorio();
 
                 //ahora procesamos
                 List<int> comunasIdProfesor = new List<int>();
@@ -156,7 +156,7 @@ namespace WebApiSinAlitas.Controllers
                         List<VCFramework.Entidad.Comuna> comunasDisponibles = new List<VCFramework.Entidad.Comuna>();
                         List<VCFramework.Entidad.Comuna> comunasProfesor = new List<VCFramework.Entidad.Comuna>();
 
-                        VCFramework.Entidad.ComunaEnvoltorio devolver = new ComunaEnvoltorio();
+                        VCFramework.Entidad.ComunaEnvoltorio devolver = new VCFramework.Entidad.ComunaEnvoltorio();
 
                         //ahora procesamos
                         List<int> comunasIdProfesor = new List<int>();

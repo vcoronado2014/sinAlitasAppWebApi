@@ -80,6 +80,10 @@
       <Project>{de6b8af1-4279-464c-9ef0-5eef972d7575}</Project>
       <Name>SinAlitas.Admin.Entidad</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VCFramework.Entidad\VCFramework.Entidad.csproj">
+      <Project>{cbecf1de-87bb-491c-951f-03af269921a0}</Project>
+      <Name>VCFramework.Entidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

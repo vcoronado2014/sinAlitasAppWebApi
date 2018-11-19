@@ -85,7 +85,7 @@ namespace WebApiSinAlitas.Controllers
 
 
             int nuevoId = 0;
-            bool existe = false;
+            //bool existe = false;
 
             VCFramework.Entidad.ProductoCodigo pco = new VCFramework.Entidad.ProductoCodigo();
 

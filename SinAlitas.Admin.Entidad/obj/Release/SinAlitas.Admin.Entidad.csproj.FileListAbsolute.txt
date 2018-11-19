@@ -1,0 +1,6 @@
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Release\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Release\SinAlitas.Admin.Entidad.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Release\SinAlitas.Admin.Entidad.csprojAssemblyReference.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Release\SinAlitas.Admin.Entidad.csproj.CoreCompileInputs.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Release\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Release\SinAlitas.Admin.Entidad.pdb

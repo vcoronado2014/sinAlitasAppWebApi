@@ -13,3 +13,16 @@ C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\VCFrame
 C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.csprojResolveAssemblyReference.cache
 C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.dll
 C:\sinalitas_app\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.pdb
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\VCFramework.NegocioMySql.dll
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\VCFramework.NegocioMySql.pdb
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\VCFramework.Entidad.dll
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\VCFramework.Entidad.pdb
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.csprojAssemblyReference.cache
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.csproj.CoreCompileInputs.cache
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.csproj.CopyComplete
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.dll
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\obj\Release\VCFramework.NegocioMySql.pdb
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\SinAlitas.Admin.Negocio.dll
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\SinAlitas.Admin.Entidad.pdb
+D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Release\SinAlitas.Admin.Negocio.pdb

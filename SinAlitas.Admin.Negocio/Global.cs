@@ -12,19 +12,25 @@ namespace SinAlitas.Admin.Negocio
         public static SinAlitas.Admin.Entidad.Rol ObtenerRolPorId(int id)
         {
             Factory fac = new Factory();
-            FiltroGenerico filtro = new FiltroGenerico();
-            filtro.Campo = "ELIMINADO";
-            filtro.Valor = "0";
-            filtro.TipoDato = TipoDatoGeneral.Entero;
+            FiltroGenerico filtro = new FiltroGenerico
+            {
+                Campo = "ELIMINADO",
+                Valor = "0",
+                TipoDato = TipoDatoGeneral.Entero
+            };
 
-            FiltroGenerico filtro1 = new FiltroGenerico();
-            filtro1.Campo = "ID";
-            filtro1.Valor = id.ToString();
-            filtro1.TipoDato = TipoDatoGeneral.Entero;
+            FiltroGenerico filtro1 = new FiltroGenerico
+            {
+                Campo = "ID",
+                Valor = id.ToString(),
+                TipoDato = TipoDatoGeneral.Entero
+            };
 
-            List<FiltroGenerico> filtros = new List<FiltroGenerico>();
-            filtros.Add(filtro);
-            filtros.Add(filtro1);
+            List<FiltroGenerico> filtros = new List<FiltroGenerico>
+            {
+                filtro,
+                filtro1
+            };
 
 
             SinAlitas.Admin.Entidad.Rol retorno = new Entidad.Rol();

@@ -135,12 +135,14 @@ namespace WebApiSinAlitas.Controllers
                 else
                 {
                     nuevoIdAlumno = VCFramework.NegocioMySql.FichaAlumno.Insertar(fichaAlumno);
-                    VCFramework.Entidad.FichaPack ficPack = new VCFramework.Entidad.FichaPack();
-                    ficPack.Activo = 1;
-                    ficPack.Eliminado = 0;
-                    ficPack.FechaCreacion = DateTime.Now;
-                    ficPack.IdAlumno = nuevoIdAlumno;
-                    ficPack.IdPack = int.Parse(idPack);
+                    VCFramework.Entidad.FichaPack ficPack = new VCFramework.Entidad.FichaPack
+                    {
+                        Activo = 1,
+                        Eliminado = 0,
+                        FechaCreacion = DateTime.Now,
+                        IdAlumno = nuevoIdAlumno,
+                        IdPack = int.Parse(idPack)
+                    };
                     nuevoIdFichaPack = VCFramework.NegocioMySql.FichaPack.Insertar(ficPack);
 
                 }

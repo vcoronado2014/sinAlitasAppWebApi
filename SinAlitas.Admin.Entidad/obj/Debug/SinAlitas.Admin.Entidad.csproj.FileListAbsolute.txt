@@ -10,3 +10,8 @@ F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Enti
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.csproj.CoreCompileInputs.cache
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.dll
 F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Debug\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\bin\Debug\SinAlitas.Admin.Entidad.pdb
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.csproj.CoreCompileInputs.cache
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.dll
+D:\sinAlitasAppWebApi\SinAlitas.Admin.Entidad\obj\Debug\SinAlitas.Admin.Entidad.pdb
