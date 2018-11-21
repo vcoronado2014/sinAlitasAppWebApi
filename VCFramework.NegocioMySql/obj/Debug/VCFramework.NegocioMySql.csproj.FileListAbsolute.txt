@@ -60,3 +60,7 @@ D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Entidad
 D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Negocio.dll
 D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Entidad.pdb
 D:\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Negocio.pdb
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Entidad.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Negocio.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Entidad.pdb
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\VCFramework.NegocioMySql\bin\Debug\SinAlitas.Admin.Negocio.pdb
