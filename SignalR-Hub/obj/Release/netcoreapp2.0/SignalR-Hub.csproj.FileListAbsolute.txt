@@ -1,0 +1,11 @@
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\bin\Release\netcoreapp2.0\SignalRHub.deps.json
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\bin\Release\netcoreapp2.0\SignalRHub.runtimeconfig.json
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\bin\Release\netcoreapp2.0\SignalRHub.runtimeconfig.dev.json
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\bin\Release\netcoreapp2.0\SignalRHub.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\bin\Release\netcoreapp2.0\SignalRHub.pdb
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\obj\Release\netcoreapp2.0\SignalR-Hub.csprojResolveAssemblyReference.cache
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\obj\Release\netcoreapp2.0\SignalR-Hub.csproj.CoreCompileInputs.cache
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\obj\Release\netcoreapp2.0\SignalR-Hub.AssemblyInfoInputs.cache
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\obj\Release\netcoreapp2.0\SignalR-Hub.AssemblyInfo.cs
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\obj\Release\netcoreapp2.0\SignalRHub.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SignalR-Hub\obj\Release\netcoreapp2.0\SignalRHub.pdb

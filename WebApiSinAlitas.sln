@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSinAlitas", "WebApiSinAlitas\WebApiSinAlitas.csproj", "{5C8BB95A-6B67-42D7-9195-862596C57013}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinAlitas.Admin.Entidad", "SinAlitas.Admin.Entidad\SinAlitas.Admin.Entidad.csproj", "{DE6B8AF1-4279-464C-9EF0-5EEF972D7575}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinAlitas.Admin.Negocio", "SinAlitas.Admin.Negocio\SinAlitas.Admin.Negocio.csproj", "{DAEEFEB7-47AD-4E70-8F1C-443803980E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR-Hub", "SignalR-Hub\SignalR-Hub.csproj", "{5CE089D4-6E26-42D4-8F62-5DE9FE8C107F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEEFEB7-47AD-4E70-8F1C-443803980E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE089D4-6E26-42D4-8F62-5DE9FE8C107F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE089D4-6E26-42D4-8F62-5DE9FE8C107F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE089D4-6E26-42D4-8F62-5DE9FE8C107F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE089D4-6E26-42D4-8F62-5DE9FE8C107F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
