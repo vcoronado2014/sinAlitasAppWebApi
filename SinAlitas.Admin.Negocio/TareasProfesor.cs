@@ -314,8 +314,9 @@ namespace SinAlitas.Admin.Negocio
                 }
             }
             if (listaRetornar != null && listaRetornar.Count > 0)
-                listaRetornar = listaRetornar.OrderByDescending(p => p.Fecha).ToList();
-           
+                //listaRetornar = listaRetornar.OrderByDescending(p => p.Fecha).ToList();
+                listaRetornar = listaRetornar.OrderBy(p => p.Fecha).ToList();
+
             return listaRetornar;
         }
 

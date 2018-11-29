@@ -117,5 +117,10 @@ namespace VCFramework.NegocioMySql
             VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
             return fac.Update<Entidad.Profesor>(profesor, setCnsWebLun);
         }
+        public static int Eliminar(Entidad.Profesor profesor)
+        {
+            VCFramework.Negocio.Factory.Factory fac = new VCFramework.Negocio.Factory.Factory();
+            return fac.Delete<Entidad.Profesor>(profesor, setCnsWebLun);
+        }
     }
 }

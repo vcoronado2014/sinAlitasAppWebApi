@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
@@ -410,6 +411,101 @@ namespace SinAlitas.Admin.Negocio
             }
 
             return profesor;
+        }
+        public static List<SinAlitas.Admin.Entidad.Profesor> ObtenerProfesoresBD(int activo, int eliminado, int rolId)
+        {
+            List<SinAlitas.Admin.Entidad.Profesor> lista = new List<Entidad.Profesor>();
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("es-CL");
+            string conexionStr = ConfigurationManager.ConnectionStrings["MSUsuarioLunConectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conexionStr);
+            SqlCommand cmd = null;
+            cmd = new SqlCommand();
+            cmd.Connection = new SqlConnection(conexionStr);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "OBTENER_PROFESORES";
+            //PARAMETROS DE ENTRADA
+            cmd.Parameters.AddWithValue("@ACTIVO", activo);
+            cmd.Parameters.AddWithValue("@ELIMINADO", eliminado);
+            cmd.Parameters.AddWithValue("@ROL_ID", rolId);
+            cmd.Connection.Open();
+
+
+            try
+            {
+                SqlDataReader rdr = cmd.ExecuteReader();
+                int ID = rdr.GetOrdinal("ID");
+                int RUT = rdr.GetOrdinal("RUT");
+                int NOMBRES = rdr.GetOrdinal("NOMBRES");
+                int PRIMER_APELLIDO = rdr.GetOrdinal("PRIMER_APELLIDO");
+                int SEGUNDO_APELLIDO = rdr.GetOrdinal("SEGUNDO_APELLIDO");
+                int FOTOGRAFIA = rdr.GetOrdinal("FOTOGRAFIA");
+                int CODIGO = rdr.GetOrdinal("CODIGO");
+                int PAI_ID = rdr.GetOrdinal("PAI_ID");
+                int REG_ID = rdr.GetOrdinal("REG_ID");
+                int COM_ID = rdr.GetOrdinal("COM_ID");
+                int DIRECCION = rdr.GetOrdinal("DIRECCION");
+                int SEXO = rdr.GetOrdinal("SEXO");
+                int FECHA_NACIMIENTO = rdr.GetOrdinal("FECHA_NACIMIENTO");
+                int NOMBRE_USUARIO = rdr.GetOrdinal("NOMBRE_USUARIO");
+                int PASSWORD = rdr.GetOrdinal("PASSWORD");
+                int ACTIVO = rdr.GetOrdinal("ACTIVO");
+                int ELIMINADO = rdr.GetOrdinal("ELIMINADO");
+                int TELEFONOS_CONTACTO = rdr.GetOrdinal("TELEFONOS_CONTACTO");
+                int BANCO = rdr.GetOrdinal("BANCO");
+                int TIPO_CUENTA = rdr.GetOrdinal("TIPO_CUENTA");
+                int NUMERO_CUENTA = rdr.GetOrdinal("NUMERO_CUENTA");
+                int EMAIL = rdr.GetOrdinal("EMAIL");
+                int NOD_ID = rdr.GetOrdinal("NOD_ID");
+                int COM_ID_ASIGNADA = rdr.GetOrdinal("COM_ID_ASIGNADA");
+                int ROL_ID = rdr.GetOrdinal("ROL_ID");
+
+                try
+                {
+                    while (rdr.Read())
+                    {
+
+                        Entidad.Profesor lun = new Entidad.Profesor();
+                        lun.Id = rdr.GetInt32(ID);
+                        lun.Nombres = rdr.IsDBNull(NOMBRES) ? "" : rdr.GetString(NOMBRES);
+                        lun.PrimerApellido = rdr.IsDBNull(PRIMER_APELLIDO) ? "" : rdr.GetString(PRIMER_APELLIDO);
+                        lun.SegundoApellido = rdr.IsDBNull(SEGUNDO_APELLIDO) ? "" : rdr.GetString(SEGUNDO_APELLIDO);
+                        lun.Fotografia = rdr.IsDBNull(FOTOGRAFIA) ? "img/no_disponible.png" : rdr.GetString(FOTOGRAFIA);
+                        lun.Codigo = rdr.IsDBNull(CODIGO) ? "" : rdr.GetString(CODIGO);
+                        lun.PaiId = rdr.GetInt32(PAI_ID);
+                        lun.RegId = rdr.GetInt32(REG_ID);
+                        lun.ComId = rdr.GetInt32(COM_ID);
+                        lun.Direccion = rdr.IsDBNull(DIRECCION) ? "" : rdr.GetString(DIRECCION);
+                        lun.Sexo = rdr.IsDBNull(SEXO) ? "" : rdr.GetString(SEXO);
+                        lun.FechaNacimiento = rdr.IsDBNull(FECHA_NACIMIENTO) ? DateTime.MinValue : rdr.GetDateTime(FECHA_NACIMIENTO);
+                        lun.NombreUsuario = rdr.IsDBNull(NOMBRE_USUARIO) ? "" : rdr.GetString(NOMBRE_USUARIO);
+                        //lun.Password = rdr.IsDBNull(PASSWORD) ? "" : rdr.GetString(PASSWORD);
+                        lun.Activo = rdr.GetInt32(ACTIVO);
+                        lun.Eliminado = rdr.GetInt32(ELIMINADO);
+                        lun.TelefonosContacto = rdr.IsDBNull(TELEFONOS_CONTACTO) ? "" : rdr.GetString(TELEFONOS_CONTACTO);
+                        lun.Banco = rdr.IsDBNull(BANCO) ? "" : rdr.GetString(BANCO);
+                        lun.TipoCuenta = rdr.GetInt32(TIPO_CUENTA);
+                        lun.NumeroCuenta = rdr.IsDBNull(NUMERO_CUENTA) ? "" : rdr.GetString(NUMERO_CUENTA);
+                        lun.Email = rdr.IsDBNull(EMAIL) ? "" : rdr.GetString(EMAIL);
+                        lun.NodId = rdr.GetInt32(NOD_ID);
+                        lun.ComIdAsignada = rdr.IsDBNull(COM_ID_ASIGNADA) ? "" : rdr.GetString(COM_ID_ASIGNADA);
+                        lun.RolId = rdr.GetInt32(ROL_ID);
+
+                        lista.Add(lun);
+                    }
+                }
+                finally
+                {
+                    rdr.Close();
+                }
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+
+            return lista;
+
         }
 
         public static List<SinAlitas.Admin.Entidad.Profesor> ObtenerProfesores()

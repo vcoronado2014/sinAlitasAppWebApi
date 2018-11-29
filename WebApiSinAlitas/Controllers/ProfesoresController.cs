@@ -78,6 +78,7 @@ namespace WebApiSinAlitas.Controllers
             string sexo = string.IsNullOrEmpty(Convert.ToString(data.Sexo)) ? "" : Convert.ToString(data.Sexo);
             string correo = string.IsNullOrEmpty(Convert.ToString(data.Correo)) ? "" : Convert.ToString(data.Correo);
             string activo = string.IsNullOrEmpty(Convert.ToString(data.Activo)) ? "0" : Convert.ToString(data.Activo);
+            string eliminado = string.IsNullOrEmpty(Convert.ToString(data.Eliminado)) ? "0" : Convert.ToString(data.Eliminado);
 
             int nuevoIdProfesor = 0;
             bool existeProfesor = false;
@@ -97,11 +98,8 @@ namespace WebApiSinAlitas.Controllers
 
                 }
                 profe.Activo = int.Parse(activo);
-                if (profe.Activo == 0)
-                {
-                    profe.Eliminado = 1;
-
-                }
+                //para eliminar al profe
+                profe.Eliminado = int.Parse(eliminado);
                 profe.Email = correo;
                 profe.NodId = 1;
                 profe.Nombres = nombres;
@@ -117,20 +115,40 @@ namespace WebApiSinAlitas.Controllers
                 //es nuevo o antiguo
                 if (existeProfesor)
                 {
-
-                    VCFramework.NegocioMySql.Profesor.Modificar(profe);
+                    if (profe.Eliminado == 1)
+                    {
+                        VCFramework.NegocioMySql.Profesor.Eliminar(profe);
+                    }
+                    else
+                    {
+                        VCFramework.NegocioMySql.Profesor.Modificar(profe);
+                    }
                 }
                 else
                 {
-                    profe.Codigo = "";
-                    profe.ComId = 13;
-                    profe.Direccion = "";
-                    profe.Fotografia = "";
-                    profe.Password = profe.Rut;
-                    profe.Eliminado = 0;
-                    profe.Activo = 1;
+                    //AHORA LO BUSCAMOS POR RUN
+                    profe = VCFramework.NegocioMySql.Profesor.Listar().Find(p=>p.Rut == profe.Rut);
+                    if (profe.Id > 0)
+                    {
+                        //existe por run
+                        //NO HAY QUE HACER NADA
+                    }
+                    else
+                    {
+                        //definitivamente no esta
+                        profe.Codigo = "";
+                        profe.ComId = 13;
+                        profe.RegId = 13;
+                        profe.Direccion = "cordon roma 0621";
+                        profe.Fotografia = "";
+                        profe.Password = profe.Rut;
+                        profe.Eliminado = 0;
+                        profe.Activo = 1;
+                        profe.PaiId = 1;
 
-                    nuevoIdProfesor = VCFramework.NegocioMySql.Profesor.Insertar(profe);
+                        nuevoIdProfesor = VCFramework.NegocioMySql.Profesor.Insertar(profe);
+                    }
+ 
 
                 }
 

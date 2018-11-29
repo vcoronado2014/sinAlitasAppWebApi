@@ -37,3 +37,4 @@ D:\sinAlitasAppWebApi\VCFramework.Entidad\bin\Debug\VCFramework.Entidad.pdb
 D:\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csproj.CoreCompileInputs.cache
 D:\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.dll
 D:\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.pdb
+D:\sinAlitasAppWebApi\VCFramework.Entidad\obj\Debug\VCFramework.Entidad.csprojAssemblyReference.cache

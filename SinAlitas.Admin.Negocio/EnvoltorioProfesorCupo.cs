@@ -135,7 +135,7 @@ namespace SinAlitas.Admin.Negocio
 
             List<Entidad.Profesor> profesores = new List<Entidad.Profesor>();
             if (idProfe == 0)
-                profesores =  Negocio.Profesor.ObtenerProfesores();
+                profesores =  Negocio.Profesor.ObtenerProfesoresBD(1,0,3);//SOLO PROFES ACTIVOS Y NO ELIMINADOS
             else
             {
                 profesores.Add(Negocio.Profesor.ObtenerProfesorPord(idProfe));

@@ -56,6 +56,16 @@ namespace WebApiSinAlitas.Controllers
                 int diaOcho = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(7));
                 int diaNueve = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(8));
                 int diaDiez = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(9));
+                int diaOnce = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(10));
+                int diaDoce = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(11));
+                int diaTrece = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(12));
+                int diaCatorce = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(13));
+                int diaQuince = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(14));
+                int diaDieciseis = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(15));
+                int diaDiecisiete = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(16));
+                int diaDieciocho = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(17));
+                int diaDiecinueve = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(18));
+                int diaVeinte = SinAlitas.Admin.Entidad.Utiles.RetornaFechaEntera(fechaInicio.AddDays(19));
                 List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosUno = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(hoy);
                 List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDos = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDos);
                 List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosTres = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaTres);
@@ -66,6 +76,16 @@ namespace WebApiSinAlitas.Controllers
                 List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosOcho = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaOcho);
                 List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosNueve = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaNueve);
                 List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDiez = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDiez);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosOnce = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaOnce);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDoce = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDoce);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosTrece = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaTrece);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosCatorce = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaCatorce);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosQuice = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaQuince);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDieciseis = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDieciseis);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDiecisiete = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDiecisiete);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDieciocho = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDieciocho);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosDiecinueve = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaDiecinueve);
+                List<SinAlitas.Admin.Entidad.ResultadosProfesor> resultadosVeinte = SinAlitas.Admin.Negocio.PlanillaProfesor.ObtenerMatriz(diaVeinte);
 
 
                 //ahora que tenemos un listado de profesores con sus packs y segmentos armamos la nueva lista
@@ -79,6 +99,16 @@ namespace WebApiSinAlitas.Controllers
                 List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaOcho = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
                 List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaNueve = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
                 List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaDiez = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaOnce = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaDoce = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaTrece = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaCatorce = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaQuince = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaDieciseis = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaDiecisiete = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaDieciocho = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaDiecinueve = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
+                List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaVeinte = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
 
                 List<SinAlitas.Admin.Entidad.PlanillaProfesor> listaPlanillaCompleta = new List<SinAlitas.Admin.Entidad.PlanillaProfesor>();
                 #region primer dia
@@ -532,6 +562,458 @@ namespace WebApiSinAlitas.Controllers
                 }
                 #endregion
 
+                //nuevos
+                #region once
+                if (resultadosOnce != null && resultadosOnce.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosOnce)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaOnce.Add(planilla);
+                    }
+                }
+                #endregion
+                #region doce
+                if (resultadosDoce != null && resultadosDoce.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosDoce)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaDoce.Add(planilla);
+                    }
+                }
+                #endregion
+                #region trece
+                if (resultadosTrece != null && resultadosTrece.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosTrece)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaTrece.Add(planilla);
+                    }
+                }
+                #endregion
+                #region catorce
+                if (resultadosCatorce != null && resultadosCatorce.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosCatorce)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaCatorce.Add(planilla);
+                    }
+                }
+                #endregion
+                #region quince
+                if (resultadosQuice != null && resultadosQuice.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosQuice)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaQuince.Add(planilla);
+                    }
+                }
+                #endregion
+                #region dieciseis
+                if (resultadosDieciseis != null && resultadosDieciseis.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosDieciseis)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaDieciseis.Add(planilla);
+                    }
+                }
+                #endregion
+                #region Diecisiete
+                if (resultadosDiecisiete != null && resultadosDiecisiete.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosDiecisiete)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaDiecisiete.Add(planilla);
+                    }
+                }
+                #endregion
+                #region Dieciocho
+                if (resultadosDieciocho != null && resultadosDieciocho.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosDieciocho)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaDieciocho.Add(planilla);
+                    }
+                }
+                #endregion
+                #region Diecinueve
+                if (resultadosDiecinueve != null && resultadosDiecinueve.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosDiecinueve)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaDiecinueve.Add(planilla);
+                    }
+                }
+                #endregion
+                #region veinte
+                if (resultadosVeinte != null && resultadosVeinte.Count > 0)
+                {
+                    foreach (SinAlitas.Admin.Entidad.ResultadosProfesor resul in resultadosVeinte)
+                    {
+                        SinAlitas.Admin.Entidad.PlanillaProfesor planilla = new SinAlitas.Admin.Entidad.PlanillaProfesor();
+                        planilla.IdProfesor = resul.Id;
+                        planilla.NombreProfesor = resul.Nombres;
+                        planilla.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte);
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 09:00"))
+                        {
+                            planilla.SegmentoUno = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 10:15"))
+                        {
+                            planilla.SegmentoDos = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 11:30"))
+                        {
+                            planilla.SegmentoTres = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 13:00"))
+                        {
+                            planilla.SegmentoCuatro = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 14:15"))
+                        {
+                            planilla.SegmentoCinco = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 15:30"))
+                        {
+                            planilla.SegmentoSeis = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 16:45"))
+                        {
+                            planilla.SegmentoSiete = resul.CodigoCliente;
+                        }
+                        if (resul.FechaHoraInicio == Convert.ToDateTime(SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte).ToShortDateString() + " 18:00"))
+                        {
+                            planilla.SegmentoOcho = resul.CodigoCliente;
+                        }
+                        listaPlanillaVeinte.Add(planilla);
+                    }
+                }
+                #endregion
+
                 listaPlanillaCompleta.AddRange(listaPlanillaUno);
                 listaPlanillaCompleta.AddRange(listaPlanillaDos);
                 listaPlanillaCompleta.AddRange(listaPlanillaTres);
@@ -542,6 +1024,17 @@ namespace WebApiSinAlitas.Controllers
                 listaPlanillaCompleta.AddRange(listaPlanillaOcho);
                 listaPlanillaCompleta.AddRange(listaPlanillaNueve);
                 listaPlanillaCompleta.AddRange(listaPlanillaDiez);
+                //nuevos
+                listaPlanillaCompleta.AddRange(listaPlanillaOnce);
+                listaPlanillaCompleta.AddRange(listaPlanillaDoce);
+                listaPlanillaCompleta.AddRange(listaPlanillaTrece);
+                listaPlanillaCompleta.AddRange(listaPlanillaCatorce);
+                listaPlanillaCompleta.AddRange(listaPlanillaQuince);
+                listaPlanillaCompleta.AddRange(listaPlanillaDieciseis);
+                listaPlanillaCompleta.AddRange(listaPlanillaDiecisiete);
+                listaPlanillaCompleta.AddRange(listaPlanillaDieciocho);
+                listaPlanillaCompleta.AddRange(listaPlanillaDiecinueve);
+                listaPlanillaCompleta.AddRange(listaPlanillaVeinte);
 
                 List<SinAlitas.Admin.Entidad.ItemProfesor> listaFinal = new List<SinAlitas.Admin.Entidad.ItemProfesor>();
 
@@ -661,6 +1154,67 @@ namespace WebApiSinAlitas.Controllers
                         {
                             SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
                             detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiez);
+                            prof.Detalle.Add(detalle);
+                        }
+                        //nuevos
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaOnce);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDoce);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaTrece);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaCatorce);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaQuince);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciseis);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecisiete);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDieciocho);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaDiecinueve);
+                            prof.Detalle.Add(detalle);
+                        }
+                        if (!prof.Detalle.Exists(p => p.Fecha == SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte)))
+                        {
+                            SinAlitas.Admin.Entidad.ItemDetalle detalle = new SinAlitas.Admin.Entidad.ItemDetalle();
+                            detalle.Fecha = SinAlitas.Admin.Entidad.Utiles.RetornaFecha(diaVeinte);
                             prof.Detalle.Add(detalle);
                         }
                     }

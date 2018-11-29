@@ -79,10 +79,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/16/2018 21:14:06</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/18/2018 22:18:28</publishTime>
+      <publishTime>11/28/2018 22:54:30</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/18/2018 22:18:28</publishTime>
+      <publishTime>11/28/2018 22:54:30</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/16/2018 21:14:06</publishTime>
@@ -175,16 +175,16 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/16/2018 21:14:08</publishTime>
     </File>
     <File Include="bin/SinAlitas.Admin.Entidad.dll">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 21:23:32</publishTime>
     </File>
     <File Include="bin/SinAlitas.Admin.Entidad.pdb">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 21:23:32</publishTime>
     </File>
     <File Include="bin/SinAlitas.Admin.Negocio.dll">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 22:51:00</publishTime>
     </File>
     <File Include="bin/SinAlitas.Admin.Negocio.pdb">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 22:51:00</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>11/16/2018 21:14:06</publishTime>
@@ -226,25 +226,25 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/16/2018 21:14:08</publishTime>
     </File>
     <File Include="bin/VCFramework.Entidad.dll">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 21:23:32</publishTime>
     </File>
     <File Include="bin/VCFramework.Entidad.pdb">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 21:23:32</publishTime>
     </File>
     <File Include="bin/VCFramework.Negocio.Factory.dll">
       <publishTime>11/16/2018 21:14:06</publishTime>
     </File>
     <File Include="bin/VCFramework.NegocioMySql.dll">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 22:51:00</publishTime>
     </File>
     <File Include="bin/VCFramework.NegocioMySql.pdb">
-      <publishTime>11/18/2018 22:08:10</publishTime>
+      <publishTime>11/28/2018 22:51:00</publishTime>
     </File>
     <File Include="bin/WebApiSinAlitas.dll">
-      <publishTime>11/18/2018 22:18:20</publishTime>
+      <publishTime>11/28/2018 22:51:02</publishTime>
     </File>
     <File Include="bin/WebApiSinAlitas.pdb">
-      <publishTime>11/18/2018 22:18:20</publishTime>
+      <publishTime>11/28/2018 22:51:00</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>11/16/2018 21:14:08</publishTime>
@@ -289,7 +289,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/16/2018 21:14:06</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/18/2018 22:18:22</publishTime>
+      <publishTime>11/28/2018 22:54:26</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/16/2018 21:14:06</publishTime>
@@ -346,7 +346,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/16/2018 21:14:06</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/18/2018 22:18:22</publishTime>
+      <publishTime>11/28/2018 22:54:24</publishTime>
     </File>
   </ItemGroup>
 </Project>
