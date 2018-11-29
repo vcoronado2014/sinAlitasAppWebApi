@@ -42,7 +42,8 @@ namespace SinAlitas.Admin.Entidad
                 //DateTime fechaIniSemnana = fechaInicio;
                 DateTime fechaIniSemnana = DateTime.MinValue;
                 if (i == 0)
-                    fechaIniSemnana = fechaInicio.AddHours(23);
+                    //fechaIniSemnana = fechaInicio.AddHours(23);
+                    fechaIniSemnana = fechaInicio.AddHours(1);
                 else
                     fechaIniSemnana = Convert.ToDateTime(fechaInicio.ToShortDateString() + " 06:00");
                 DateTime fechaTerSemana = fechaIniSemnana.AddDays(6);

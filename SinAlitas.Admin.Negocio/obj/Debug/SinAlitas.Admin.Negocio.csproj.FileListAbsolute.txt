@@ -29,3 +29,5 @@ D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.
 D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\obj\Debug\SinAlitas.Admin.Negocio.pdb
 D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Entidad.dll
 D:\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Entidad.pdb
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Entidad.dll
+F:\NUEVO_DESARROLLO\SINALITAS_APPS\API_N\sinAlitasAppWebApi\SinAlitas.Admin.Negocio\bin\Debug\VCFramework.Entidad.pdb
