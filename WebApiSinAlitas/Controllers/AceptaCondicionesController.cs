@@ -86,13 +86,23 @@ namespace WebApiSinAlitas.Controllers
 
             try
             {
-                acpeta.PcoId = int.Parse(idPack);
-                acpeta.Activo = 1;
-                acpeta.EsAceptado = 1;
-                acpeta.EsCompletado = 0;
-                acpeta.FechaAcepta = DateTime.Now;
-                int nuevoId = VCFramework.NegocioMySql.AceptaCondiciones.Insertar(acpeta);
-                acpeta.Id = nuevoId;
+                VCFramework.Entidad.AceptaCondiciones entidadValidar = VCFramework.NegocioMySql.AceptaCondiciones.ObtenerPorPcoId(int.Parse(idPack));
+                if (entidadValidar !=  null && entidadValidar.Id > 0)
+                {
+                    //ya tiene acepta condiciones
+                    acpeta = entidadValidar;
+                }
+                else
+                {
+                    acpeta.PcoId = int.Parse(idPack);
+                    acpeta.Activo = 1;
+                    acpeta.EsAceptado = 1;
+                    acpeta.EsCompletado = 0;
+                    acpeta.FechaAcepta = DateTime.Now;
+                    int nuevoId = VCFramework.NegocioMySql.AceptaCondiciones.Insertar(acpeta);
+                    acpeta.Id = nuevoId;
+                }
+
 
                 //esto lo modificamos para que pueda irse directo del acepta condiciones al detalle del pack y crear los alumnos
 

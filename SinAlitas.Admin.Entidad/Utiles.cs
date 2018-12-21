@@ -36,17 +36,20 @@ namespace SinAlitas.Admin.Entidad
             //vamos a entregar máximo 4 semanas
             //la fecha de inicio no se agregará 23 horas
             //fechaInicio = fechaInicio.AddHours(23);
-            for (int i = 0; i < 8; i++)
+            //esto lo ahumentamos de 8 a 12
+            for (int i = 0; i < 12; i++)
             {
                 int suma = i + 1;
                 //DateTime fechaIniSemnana = fechaInicio;
                 DateTime fechaIniSemnana = DateTime.MinValue;
                 if (i == 0)
                     //fechaIniSemnana = fechaInicio.AddHours(23);
-                    fechaIniSemnana = fechaInicio.AddHours(1);
+                    //fechaIniSemnana = fechaInicio.AddHours(1);
+                    fechaIniSemnana = Convert.ToDateTime(fechaInicio.ToShortDateString() + " 06:00");
                 else
                     fechaIniSemnana = Convert.ToDateTime(fechaInicio.ToShortDateString() + " 06:00");
-                DateTime fechaTerSemana = fechaIniSemnana.AddDays(6);
+                //se agregan estas horas para que traiga correctamente el segmento
+                DateTime fechaTerSemana = fechaIniSemnana.AddDays(6).AddHours(15);
                 string semanaTexto = "Semana " + suma.ToString() + " desde el " + fechaIniSemnana.ToShortDateString() + " al " + fechaTerSemana.ToShortDateString();
                 Entidad.Semanas sem = new Semanas();
                 sem.FechaInicioSemana = fechaIniSemnana;

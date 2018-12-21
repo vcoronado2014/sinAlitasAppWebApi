@@ -97,6 +97,8 @@ namespace WebApiSinAlitas.Controllers
 
             if (idPack == null)
                 throw new ArgumentNullException("PcoId");
+            if (nombreCompleto == "" || edad == "" || dondeAcudir == "" || numeroEmergencia == "")
+                throw new ArgumentNullException("Debe agregar datos");
 
             //en este caso vamos a retornar una lista de alumnos de la ficha
             List<VCFramework.Entidad.EnvoltorioFicha> fichas = new List<VCFramework.Entidad.EnvoltorioFicha>();

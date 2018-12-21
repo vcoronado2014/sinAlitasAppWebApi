@@ -29,8 +29,12 @@ namespace VCFramework.NegocioMySql
                 {
                     lista2 = lista.Cast<VCFramework.Entidad.AceptaCondiciones>().ToList();
                 }
-                if (lista2 != null && lista2.Count == 1)
-                    entidad = lista2[0];
+                if (lista2 != null && lista2.Count > 0)
+                {
+                    //entidad = lista2[0];
+                    entidad = lista2.FirstOrDefault();
+                }
+                    
 
 
             }
